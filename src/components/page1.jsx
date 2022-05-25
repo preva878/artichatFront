@@ -1,7 +1,7 @@
-import Page2 from './pages/page2';
+//import Page2 from './pages/page2';
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { Outlet, Link } from "react-router-dom";
+//import { Outlet, Link } from "react-router-dom";
 
 const Page1 = function(props){
 
@@ -18,13 +18,7 @@ const Page1 = function(props){
     const[Etat,setEtat]=useState("")
     const[Traitement,setTraitement]=useState("")
     const[Note,setNote]=useState("")
-    const [nomInpute,setInputNom]=useState("")
-    const [animalNom,setAnimalNom]=useState("")
-    
-    const Click=function(){
-        setAnimalNom(nomInpute)
-        
-      }
+   
 
     useEffect(()=>{
         if(nomInput){

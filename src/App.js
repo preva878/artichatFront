@@ -1,5 +1,6 @@
 import Page1 from './components/page1';
 import Page2 from './components/pages/page2';
+import Page3 from './components/pages/Page3';
 
 import Layout from './components/Layout';
 import Home from './components/Home';
@@ -39,6 +40,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="page1" element={<Page1 />} />
+          <Route path="page3" element={<Page3 />} />
           
           
          
@@ -49,8 +51,8 @@ function App() {
          
         </div>
       </header>
-      <h1>Trouver ici les recherches d'artichats </h1>
-       <a> 
+      
+       {/* <a> 
       <input type="text" value={nomInput} onChange={i => setInputNom(i.target.value)} ></input>
           <button onClick={Click} >entrer nom </button>
         <br></br>
@@ -62,7 +64,7 @@ function App() {
       <br></br>
       <Page2 nomOutInput={animalNomout}></Page2> 
       
-      </a>   
+      </a>    */}
     </div> 
   );
 }
