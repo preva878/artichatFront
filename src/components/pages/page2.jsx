@@ -51,7 +51,7 @@ const Page2 = function(props){
 
         <div>
       
-       <h2>Nom de l'artichat qui s'en va :[{Nom}`]</h2>
+       <h2>Nom de l'artichat qui s'en va :{Nom}</h2>
        <ul>
             <li>sexe defini : {SexeDefini}</li>
             <li>Particularite: {Particularite}</li>

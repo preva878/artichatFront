@@ -1,4 +1,4 @@
-
+import Page2 from './pages/page2';
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { Outlet, Link } from "react-router-dom";
@@ -20,6 +20,7 @@ const Page1 = function(props){
     const[Note,setNote]=useState("")
     const [nomInpute,setInputNom]=useState("")
     const [animalNom,setAnimalNom]=useState("")
+    
     const Click=function(){
         setAnimalNom(nomInpute)
         
@@ -44,14 +45,19 @@ const Page1 = function(props){
         }
     },[nomInput])
 
+
+   
     return(
 
         <div>
-    
+   
+          
+         
+          
      
        <ul>
            <li> sexe : {Sexe}</li>
-           <li></li>
+           <li>nom: {Nom} </li>
            <li> id: {id}</li>
            <li> famille d'accueil: {FamilleAccueil}</li>
            <li>age: {Age} semaines</li>
@@ -60,7 +66,8 @@ const Page1 = function(props){
            <li>Etat: {Etat}</li>
            <li>Traitement : {Traitement}</li>
            <p>note : {Note}</p>
-       </ul>
+       </ul> 
+       
        
    </div>
     )

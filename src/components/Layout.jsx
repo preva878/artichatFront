@@ -9,7 +9,7 @@ const Layout = () => {
             <Link to="/">Home</Link> {/* la page layout sert de navigateur*/ }
           </li>
           <li>
-            <Link to="/Page3">page3essai</Link>
+            <Link to="/Page1">page1essai</Link>
           </li>
           
         </ul>
