@@ -40,7 +40,7 @@ const Page5 = ({history}) => {
     } ;
     return (
         <>
-            <Container className='mt-5 p-2'>
+            <Container >
                 <h1>Add Product</h1>
                 <hr />
 
@@ -48,7 +48,7 @@ const Page5 = ({history}) => {
 
                 
 
-                    <Form.Group className="mb-3" controlId="Nom">
+                    <Form.Group  controlId="Nom">
                         <Form.Label>Nom</Form.Label>
                         <Form.Control
                             value={Nom}
