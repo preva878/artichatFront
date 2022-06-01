@@ -23,7 +23,7 @@ const Page1 = function(props){
     useEffect(()=>{
         if(nomInput){
             axios.get("http://localhost:8085/animalinnom?Nom=" + nomInput)
-            .then(({data})=>{
+            .then(({data}) => {
                 setId(data.id)
                 setNom(data.Nom)
                 setSexe(data.Sexe)

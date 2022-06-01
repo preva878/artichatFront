@@ -1,6 +1,7 @@
 import Page1 from './components/page1';
 import Page2 from './components/pages/page2';
 import Page3 from './components/pages/Page3';
+import Page4 from './components/pages/page4';
 
 import Layout from './components/Layout';
 import Home from './components/Home';
@@ -41,6 +42,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="page1" element={<Page1 />} />
           <Route path="page3" element={<Page3 />} />
+          <Route path="page4" element={<Page4 />} />
           
           
          
@@ -52,6 +54,11 @@ function App() {
         </div>
       </header>
       
+      
+
+
+
+
        {/* <a> 
       <input type="text" value={nomInput} onChange={i => setInputNom(i.target.value)} ></input>
           <button onClick={Click} >entrer nom </button>

@@ -14,6 +14,9 @@ const Layout = () => {
           <li>
             <Link to="/Page3">Page3</Link>
           </li>
+          <li>
+            <Link to="/Page4" >Page4</Link>
+          </li>
           
         </ul>
       </nav>
