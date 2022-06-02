@@ -1,5 +1,10 @@
 import {useState} from 'react';
 import axios from 'axios';
+import { DatePicker } from 'shineout'
+
+
+
+
 
 
 const url = `http://localhost:8085/equipementsinsert`;
@@ -32,6 +37,10 @@ const Page4 = () => {
         <section>
             <h2>essai post</h2>
             <form action="" method="post" onSubmit={handleSubmit}>
+            <div>
+            
+           
+    </div>
                 <div>
                     <label htmlFor="Nom">Nom
                     </label>
@@ -40,9 +49,11 @@ const Page4 = () => {
                     value = {Nom}
                     onChange={(e) => setNom(e.target.value)}  />
                 </div>
+   
                 <div>
                     <label htmlFor="Type">Types
                     </label>
+                    
                     <input type="text" 
                     id='Types'
                     value = {Types}
@@ -59,7 +70,8 @@ const Page4 = () => {
                 <div>
                     <label htmlFor="DateEntree">Date arrivee
                     </label>
-                    <input type="text" 
+                    
+                    <input type="date" 
                     id='DateEntree'
                     value = {DateEntree}
                     onChange={(e) => setDateEntree(e.target.value)}  />
@@ -67,7 +79,7 @@ const Page4 = () => {
                 <div>
                     <label htmlFor="DatePeremption">date de peremption
                     </label>
-                    <input type="text" 
+                    <input type="date" 
                     id='DatePeremption'
                     value = {DatePeremption}
                     onChange={(e) => setDatePeremption(e.target.value)}  />
