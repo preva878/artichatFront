@@ -17,6 +17,9 @@ const Layout = () => {
           <li>
             <Link to="/Page4" >Page4</Link>
           </li>
+          <li>
+            <Link to="/AnimalInPost">ajouter un artichat</Link>
+          </li>
          
           
         </ul>
