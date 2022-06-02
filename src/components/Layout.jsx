@@ -20,6 +20,9 @@ const Layout = () => {
           <li>
             <Link to="/AnimalInPost">ajouter un artichat</Link>
           </li>
+          <li>
+            <Link to="/AnimalOutPost">Encoder un depart</Link>
+          </li>
          
           
         </ul>

@@ -4,6 +4,7 @@ import Page3 from './components/pages/Page3';
 import Page4 from './components/pages/page4';
 import Page5 from './components/pages/Page5';
 import AnimalInPost from './components/animalin/PostAnimalin';
+import AnimalOutPost from './components/animalout/PostAnimalOut';
 
 import Layout from './components/Layout';
 import Home from './components/Home';
@@ -46,6 +47,7 @@ function App() {
           <Route path="page3" element={<Page3 />} />
           <Route path="page4" element={<Page4 />} />
           <Route path="AnimalInPost" element={<AnimalInPost />} />
+          <Route path="AnimalOutPost" element={<AnimalOutPost />} />
         
           
          

@@ -10,6 +10,7 @@ const Page2 = function(props){
 
     const [id,setId]= useState("")
     const [Nom,setNomOut]= useState("")
+    const [NomDefinitif,setNomDefinitif] = useState("")
     const [Particularite,setParticularite]= useState("")
     const [SexeDefini,setSexe] = useState("")
     const [Adoptant,setAdoptant] = useState("")
@@ -30,6 +31,7 @@ const Page2 = function(props){
             .then(({data})=>{
                
                 setNomOut(data.Nom)
+                setNomDefinitif(data.NomDefinitif)
                 setSexe(data.SexeDefini)
                 setParticularite(data.Particularite)
                 setAdoptant(data.Adoptant)
@@ -53,6 +55,7 @@ const Page2 = function(props){
       
        <h2>Nom de l'artichat qui s'en va :{Nom}</h2>
        <ul>
+           <li>Nom definitif : {NomDefinitif}</li>
             <li>sexe defini : {SexeDefini}</li>
             <li>Particularite: {Particularite}</li>
             <li>Adoptant : {Adoptant}</li>
