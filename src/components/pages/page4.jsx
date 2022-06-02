@@ -15,6 +15,7 @@ const Page4 = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            console.log(Nom);
             const resp = await axios.post(url,{Nom:Nom, Types:Types,
                 Quantite:Quantite,
                 DateEntree:DateEntree,DatePeremption:DatePeremption,

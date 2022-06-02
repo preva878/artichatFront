@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Container, Form, Button } from 'react-bootstrap'
 
 
-const url = `http://localhost:8085`;
+const url = `http://localhost:8085/equipementsinsert`;
 
 const Page5 = ({history}) => {
     const [Nom,setNom] = useState('');
@@ -33,15 +33,15 @@ const Page5 = ({history}) => {
         formData.append('DatePeremption',DatePeremption)
         formData.append('Etats',Etats)
 
-        await axios.post(url,formData)
-        history.pushState('/equipementsinsert')
+        await axios.post(`http://localhost:8085/equipementsinsert`,formData)
+         history.pushState('/equipementsinsert')
 
         
     } ;
     return (
         <>
             <Container >
-                <h1>Add Product</h1>
+                <h1>essai ajout</h1>
                 <hr />
 
                 <Form onSubmit={handleSubmit} method="POST" >
@@ -53,6 +53,46 @@ const Page5 = ({history}) => {
                         <Form.Control
                             value={Nom}
                             onChange={(e) => setNom(e.target.value)}
+                            type="text"
+                          />
+                    </Form.Group>
+                    <Form.Group  controlId="Types">
+                        <Form.Label>Types</Form.Label>
+                        <Form.Control
+                            value={Types}
+                            onChange={(e) => setTypes(e.target.value)}
+                            type="text"
+                          />
+                    </Form.Group>
+                    <Form.Group  controlId="Quantite">
+                        <Form.Label>Quantite</Form.Label>
+                        <Form.Control
+                            value={Quantite}
+                            onChange={(e) => setQuantite(e.target.value)}
+                            type="text"
+                          />
+                    </Form.Group>
+                    <Form.Group  controlId="DateEntree">
+                        <Form.Label>Date entree</Form.Label>
+                        <Form.Control
+                            value={DateEntree}
+                            onChange={(e) => setDateEntree(e.target.value)}
+                            type="text"
+                          />
+                    </Form.Group>
+                    <Form.Group  controlId="DatePeremption">
+                        <Form.Label>Date de peremption</Form.Label>
+                        <Form.Control
+                            value={DatePeremption}
+                            onChange={(e) => setDatePeremption(e.target.value)}
+                            type="text"
+                          />
+                    </Form.Group>
+                    <Form.Group  controlId="Etats">
+                        <Form.Label>Etats</Form.Label>
+                        <Form.Control
+                            value={Etats}
+                            onChange={(e) => setEtats(e.target.value)}
                             type="text"
                           />
                     </Form.Group>
