@@ -33,9 +33,40 @@ const handleSubmit = async (f) => {
                     <label htmlFor="Nom">Nom</label>
                     <input type="text"  id="Nom" onChange={(f)=>setNom(f.target.value)} />
                 </div>
-                <button type='submit' >
-          ajouter
-        </button>
+                <div>
+                    <label htmlFor="Sexe">Sexe</label>
+                    <input type="text"  id="Sexe" onChange={(f)=>setSexe(f.target.value)} />
+                </div>
+                <div>
+                    <label htmlFor="Age">Age</label>
+                    <input type="text"  id="Age" onChange={(f)=>setAge(f.target.value)} />
+                </div>
+                <div>
+                    <label htmlFor="Poids">Poids</label>
+                    <input type="text"  id="Poids" onChange={(f)=>setPoids(f.target.value)} />
+                </div>
+                <div>
+                    <label htmlFor="DateEntree">Date entree dans l'association</label>
+                    <input type="date"  id="DateEntree" onChange={(f)=>setDateEntree(f.target.value)} />
+                </div>
+                <div>
+                    <label htmlFor="Etat">Etat</label>
+                    <input type="text"  id="Etat" onChange={(f)=>setEtat(f.target.value)} />
+                </div>
+                <div>
+                    <label htmlFor="Traitement">Traitement administrer</label>
+                    <input type="text"  id="Traitement" onChange={(f)=>setTraitement(f.target.value)} />
+                </div>
+                <div>
+                    <label htmlFor="FamilleAccueil">Famille qui accueille</label>
+                    <input type="text"  id="FamilleAccueil" onChange={(f)=>setFamilleAccueil(f.target.value)} />
+                </div>
+                <div>
+                    <label htmlFor="Note">Note</label>
+                    <input type="text"  id="Note" onChange={(f)=>setNote(f.target.value)} />
+                </div>
+               
+                <button type='submit'>ajouter </button>
             </form>
         </section>
     )

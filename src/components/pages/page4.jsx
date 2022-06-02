@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import axios from 'axios';
-import { DatePicker } from 'shineout'
+
 
 
 
@@ -37,10 +37,7 @@ const Page4 = () => {
         <section>
             <h2>essai post</h2>
             <form action="" method="post" onSubmit={handleSubmit}>
-            <div>
             
-           
-    </div>
                 <div>
                     <label htmlFor="Nom">Nom
                     </label>
