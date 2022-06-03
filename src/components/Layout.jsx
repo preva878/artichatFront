@@ -23,7 +23,12 @@ const Layout = () => {
           <li>
             <Link to="/AnimalOutPost">Encoder un depart</Link>
           </li>
-         
+         <li>
+           <Link to="/Page5">essaipage5</Link>
+         </li>
+         <li>
+           <Link to='/FamilleAccueilPost'>encoder une familleaccueil</Link>
+         </li>
           
         </ul>
       </nav>

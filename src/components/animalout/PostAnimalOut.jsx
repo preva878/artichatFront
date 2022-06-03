@@ -38,7 +38,7 @@ const AnimalOutPost = () => {
             <form action="" method="post" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="Nom">Nom</label>
-                    <input type="text" id="Nom" onChange={(g) =>setNom (g.target.value)} />
+                    <input type="text" id="Nom" onChange={(g) => setNom (g.target.value)} />
                 </div>
                 <div>
                     <label htmlFor="NomDefinitif">Nom definitif</label>

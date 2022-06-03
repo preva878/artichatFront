@@ -7,6 +7,7 @@ const url = `http://localhost:8085/equipementsinsert`;
 
 const Page5 = ({history}) => {
     const [Nom,setNom] = useState('');
+    const [Image,setImage] =useState('');
     const [Types,setTypes] = useState('');
     const [Quantite,setQuantite] = useState('');
     const [DateEntree,setDateEntree] = useState('');
@@ -27,6 +28,7 @@ const Page5 = ({history}) => {
         // }
         const formData = new FormData()
         formData.append('Nom',Nom)
+        formData.append('Image',Image)
         formData.append('Types',Types)
         formData.append('Quantite',Quantite)
         formData.append('DateEntree',DateEntree)
@@ -47,6 +49,14 @@ const Page5 = ({history}) => {
                 <Form onSubmit={handleSubmit} method="POST" >
 
                 
+                <Form.Group controlId="fileName" className="mb-3">
+                    <Form.Label>Upload Image</Form.Label>
+                    <Form.Control
+                        type="file"
+                        name='image'
+                        onChange={(e) => setImage(e.target.files[0])}
+                        size="lg" />
+                </Form.Group>
 
                     <Form.Group  controlId="Nom">
                         <Form.Label>Nom</Form.Label>
