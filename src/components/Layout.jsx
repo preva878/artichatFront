@@ -29,6 +29,12 @@ const Layout = () => {
          <li>
            <Link to='/FamilleAccueilPost'>encoder une familleaccueil</Link>
          </li>
+         <li>
+           <Link to='/AdoptantPost'>encoder adoptant</Link>
+         </li>
+         <li>
+           <Link to='/ShowArtichats'>essai show</Link>
+         </li>
           
         </ul>
       </nav>

@@ -6,6 +6,9 @@ import Page5 from './components/pages/Page5';
 import AnimalInPost from './components/animalin/PostAnimalin';
 import AnimalOutPost from './components/animalout/PostAnimalOut';
 import FamilleAccueilPost from './components/familleaccueil/postFamilleAccueil';
+import AdoptantPost from './components/adoptant/PostAdoptant';
+import ShowArtichats from './components/animalin/ShowAnimalIn';
+
 
 import Layout from './components/Layout';
 import Home from './components/Home';
@@ -17,6 +20,7 @@ import { Route } from 'react-router-dom';
 import { Routes } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { useState } from 'react';
+
 
 function App() {
   
@@ -51,7 +55,8 @@ function App() {
           <Route path="AnimalOutPost" element={<AnimalOutPost />} />
           <Route path="page5" element={<Page5 />} />
           <Route path="FamilleAccueilPost" element={<FamilleAccueilPost />} />
-        
+          <Route path="AdoptantPost" element={<AdoptantPost />} />
+          <Route path="ShowArtichats" element={<ShowArtichats />} />
           
          
         </Route>
