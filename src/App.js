@@ -20,23 +20,16 @@ import { Route } from 'react-router-dom';
 import { Routes } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { useState } from 'react';
+// import AddEquip from './components/equipements/addEquip';
+// import allEquip from './components/equipements/ShowEquip'
+// import ShowEquip from './components/equipements/ShowEquip';
 
 
 function App() {
   
 
 
-  const [nomOutInput,setinputNomout]=useState("")
-  const [animalNomout,setAnimalNomout]=useState("")
-  const [nomInput,setInputNom]=useState("")
-    const [animalNom,setAnimalNom]=useState("")
- const Click=function(){
-     setAnimalNom(nomInput)
-    
- }
-  const Click1=function(){
-     setAnimalNomout(nomOutInput)
-  }
+
   
   
   
@@ -46,6 +39,7 @@ function App() {
        <div>
        <BrowserRouter>
       <Routes>
+      
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="page1" element={<Page1 />} />
@@ -57,7 +51,7 @@ function App() {
           <Route path="FamilleAccueilPost" element={<FamilleAccueilPost />} />
           <Route path="AdoptantPost" element={<AdoptantPost />} />
           <Route path="ShowArtichats" element={<ShowArtichats />} />
-          
+           
          
         </Route>
       </Routes>

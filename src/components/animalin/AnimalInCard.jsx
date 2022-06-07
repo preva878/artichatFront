@@ -12,11 +12,11 @@ const AnimalInCard = ({Artichats}) => {
                 <Card.Body>
                     <Card.Title>Nom: {Artichats.Nom}</Card.Title>
                     <Card.Title>Famille: {Artichats.FamilleAccueil}</Card.Title>
+                    <Card.Title>Etat: {Artichats.Etat}</Card.Title>
+                    <Card.Title>Date d'arrivée: {Artichats.DateEntree}</Card.Title>
                     <Card.Text>
-                        Description: {Artichats.Note.slice(0,100)}...
+                        Note: {Artichats.Note.slice(0,100)}
                     </Card.Text>
-                 
-                    
                     
                 </Card.Body>
 
