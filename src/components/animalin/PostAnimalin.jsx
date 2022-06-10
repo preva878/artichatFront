@@ -5,7 +5,7 @@ const url = 'http://localhost:8085/animalinpost';
 
 const AnimalInPost = () => {
     const [Nom,setNom] = useState('');
-    const [Sexe,setSexe] = useState('');
+    const [currentSexe, setCurrentSexe] = useState('Indefini');
     const [Age,setAge] = useState('');
     const [Poids,setPoids] = useState('');
     const [DateEntree,setDateEntree] = useState('');
@@ -13,14 +13,21 @@ const AnimalInPost = () => {
     const [Traitement,setTraitement] = useState('');
     const [FamilleAccueil,setFamilleAccueil] = useState('');
     const [Note,setNote] = useState('');
+    
+        
+        
+        
 
 const handleSubmit = async (f) => {
     f.preventDefault();
+    alert(`artichats encoder ${Nom},${currentSexe},${Age}`)
+
     try {
-        const resp = await axios.post(url,{Nom:Nom,Sexe:Sexe,Age:Age,
+        const resp = await axios.post(url,{Nom:Nom,currentSexe:currentSexe,Age:Age,
             Poids:Poids,DateEntree:DateEntree,Etat:Etat,Traitement:Traitement,
         FamilleAccueil:FamilleAccueil,Note:Note})
         console.log(resp.data);
+        
     }catch (error) {
         console.log(error.response);
     }
@@ -33,9 +40,17 @@ const handleSubmit = async (f) => {
                     <label htmlFor="Nom">Nom</label>
                     <input type="text"  id="Nom" onChange={(f)=>setNom(f.target.value)} />
                 </div>
-                <div>
+                {/* <div>
                     <label htmlFor="Sexe">Sexe</label>
                     <input type="text"  id="Sexe" onChange={(f)=>setSexe(f.target.value)} />
+                </div> */}
+                <div>
+                    
+                    <select name="currentSexe" id="currentSexe" onChange={(f)=>setCurrentSexe(f.target.value)} value={currentSexe}>choix du sexe
+                    <option value="Male">Male</option> 
+                    <option value="Femelle">Femelle</option>
+                    <option value="Indefini">Indefini</option>
+                    </select>
                 </div>
                 <div>
                     <label htmlFor="Age">Age</label>

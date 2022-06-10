@@ -10,7 +10,7 @@ const Page1 = function(props){
 
     const [id,setId]= useState("")
     const [Nom,setNom]= useState("")
-    const [Sexe,setSexe] = useState("")
+    const [currentSexe,setCurrentSexe] = useState("")
     const [FamilleAccueil,setFamilleAccueil] = useState("")
     const[Age,setAge]=useState("")
     const[Poids,setPoids]=useState("")
@@ -26,7 +26,7 @@ const Page1 = function(props){
             .then(({data}) => {
                 setId(data.id)
                 setNom(data.Nom)
-                setSexe(data.Sexe)
+                setCurrentSexe(data.currentSexe)
                 setFamilleAccueil(data.FamilleAccueil)
                 setAge(data.Age)
                 setPoids(data.Poids)
@@ -50,7 +50,7 @@ const Page1 = function(props){
           
      
        <ul>
-           <li> sexe : {Sexe}</li>
+           <li> sexe : {currentSexe}</li>
            <li>nom: {Nom} </li>
            <li> id: {id}</li>
            <li> famille d'accueil: {FamilleAccueil}</li>

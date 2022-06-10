@@ -9,7 +9,13 @@ import FamilleAccueilPost from './components/familleaccueil/postFamilleAccueil';
 import AdoptantPost from './components/adoptant/PostAdoptant';
 import ShowArtichats from './components/animalin/ShowAnimalIn';
 
+//
+import AddProduct from './product/screens/AddProduct';
+import EditProduct from './product/screens/EditProduct';
+import ProductDetail from './product/screens/ProductDetail';
+import ShowProducts from './product/screens/ShowProducts';
 
+//
 import Layout from './components/Layout';
 import Home from './components/Home';
 
@@ -20,6 +26,7 @@ import { Route } from 'react-router-dom';
 import { Routes } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { useState } from 'react';
+
 // import AddEquip from './components/equipements/addEquip';
 // import allEquip from './components/equipements/ShowEquip'
 // import ShowEquip from './components/equipements/ShowEquip';
@@ -51,6 +58,9 @@ function App() {
           <Route path="FamilleAccueilPost" element={<FamilleAccueilPost />} />
           <Route path="AdoptantPost" element={<AdoptantPost />} />
           <Route path="ShowArtichats" element={<ShowArtichats />} />
+          <Route path="AddProduct" element={<AddProduct />} />
+          <Route path="ShowProducts" element={<ShowProducts />} />
+          
            
          
         </Route>

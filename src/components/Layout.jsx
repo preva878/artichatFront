@@ -38,6 +38,9 @@ const Layout = () => {
          <li>
            <Link to='/ShowEquip'   >essai add</Link>
          </li>
+         <li>
+           <Link to='/addProduct'>essaiproduct</Link>
+         </li>
           
         </ul>
       </nav>
