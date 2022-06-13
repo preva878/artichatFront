@@ -35,13 +35,13 @@ const Layout = () => {
          <li>
            <Link to='/ShowArtichats'>essai show</Link>
          </li>
-         <li>
-           <Link to='/ShowEquip'   >essai add</Link>
-         </li>
+         
          <li>
            <Link to='/addProduct'>essaiproduct</Link>
          </li>
-          
+          <li>
+            <Link to='/showProducts' >essaishowproduct</Link>
+          </li>
         </ul>
       </nav>
 

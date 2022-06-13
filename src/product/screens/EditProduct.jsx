@@ -17,7 +17,7 @@ const EditProduct = () => {
 
     useEffect(() => {
         const getDataById = async () => {
-            const {data} = await axios.get(`http://localhost:8085/products/${id}`)
+            const {data} = await axios.get(`/api/products/${id}`)
             setTitle(data.title)
             setPrice(data.price)
             setDescription(data.description)
@@ -40,7 +40,7 @@ const EditProduct = () => {
             published: published
         }
 
-        await axios.put(`http://localhost:8085/products/${id}`, data)
+        await axios.put(`/api/products/${id}`, data)
 
         navigate.push('/products')
 

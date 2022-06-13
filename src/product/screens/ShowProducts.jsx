@@ -10,7 +10,7 @@ const ShowProducts = () => {
 
     useEffect(() => {
         const getProductsData = async () => {
-            const { data } = await axios.get('http://localhost:8085/allProducts')
+            const { data } = await axios.get('http://localhost:3000/api/allProducts')
             console.log(data)
             setProducts(data)
         }

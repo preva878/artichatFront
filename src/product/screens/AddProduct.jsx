@@ -33,8 +33,8 @@ const AddProduct = ({ history }) => {
         formData.append('description', description)
         formData.append('published', published)
 
-        await axios.post('http://localhost:8085/products/addProduct', formData)
-        history.push('/products')
+        await axios.post('http://localhost:3000/api/addProduct', formData)
+        history.push('/addProduct')
     
     }
 

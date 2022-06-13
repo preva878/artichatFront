@@ -26,7 +26,7 @@ const ProductDetail = () => {
     useEffect(() => {
 
         const getSingleProductData = async () => {
-            const { data } = await axios.get(`/api/products/getProductReviews/${id}`)
+            const { data } = await axios.get(`http://localhost:3000/api/products/getProductReviews/${id}`)
             console.log(data)
 
             setTitle(data.title)
@@ -83,7 +83,7 @@ const ProductDetail = () => {
         <Row>
             <Col md={8} lg={8} sm={8}>
                 <Card className='shadow-lg m-3 p-2 rounded'>
-                        <Card.Img src={`http://localhost:3000/${productImage}`} fluid />
+                        <Card.Img src={`http://localhost:3001/${productImage}`} fluid />
                         <Card.Body>
                             <Card.Title>Title: {title}</Card.Title>
                             <Card.Title className="text-success">Price: ${price}</Card.Title>

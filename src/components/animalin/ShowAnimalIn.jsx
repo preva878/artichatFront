@@ -9,7 +9,7 @@ const ShowArtichats = () => {
 
     useEffect(()=> {
         const getArtichatsData = async () =>{
-            const {data} = await axios.get('http://localhost:8085/animalin')
+            const {data} = await axios.get('http://localhost:3000/animalin')
             console.log(data)
             setArtichats(data)
         }

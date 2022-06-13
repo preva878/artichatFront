@@ -1,9 +1,11 @@
 import {useState} from 'react'
 import axios from 'axios'
 
-const url = 'http://localhost:8085/animalinpost';
+import { Container, Form, Button } from 'react-bootstrap'
 
-const AnimalInPost = () => {
+
+const AnimalInPost = ({history}) => {
+
     const [Nom,setNom] = useState('');
     const [currentSexe, setCurrentSexe] = useState('Indefini');
     const [Age,setAge] = useState('');
@@ -13,78 +15,132 @@ const AnimalInPost = () => {
     const [Traitement,setTraitement] = useState('');
     const [FamilleAccueil,setFamilleAccueil] = useState('');
     const [Note,setNote] = useState('');
+    const [Image,setImage] = useState('');
     
         
-        
-        
-
-const handleSubmit = async (f) => {
-    f.preventDefault();
+const handleSubmit = async (e) => {
+    e.preventDefault();
     alert(`artichats encoder ${Nom},${currentSexe},${Age}`)
+    
+const formData = new FormData()
 
-    try {
-        const resp = await axios.post(url,{Nom:Nom,currentSexe:currentSexe,Age:Age,
-            Poids:Poids,DateEntree:DateEntree,Etat:Etat,Traitement:Traitement,
-        FamilleAccueil:FamilleAccueil,Note:Note})
-        console.log(resp.data);
-        
-    }catch (error) {
-        console.log(error.response);
-    }
-    };
+formData.append('Image', Image)
+formData.append('Nom',Nom)
+formData.append('currentSexe',currentSexe)
+formData.append('Age',Age)
+formData.append('Poids',Poids)
+formData.append('DateEntree',DateEntree)
+formData.append('Etat',Etat)
+formData.append('Traitement',Traitement)
+formData.append('FamilleAccueil',FamilleAccueil)
+formData.append('Note',Note)
+
+await axios.post('http://localhost:3000/api/addAnimalIn',formData)
+history.push('/addAnimalIn')
+}
     return (
-        <section>
-            <h2>ajouter un artichats qui vient d'arriver</h2>
-            <form action="" method='post' onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="Nom">Nom</label>
-                    <input type="text"  id="Nom" onChange={(f)=>setNom(f.target.value)} />
-                </div>
-                {/* <div>
-                    <label htmlFor="Sexe">Sexe</label>
-                    <input type="text"  id="Sexe" onChange={(f)=>setSexe(f.target.value)} />
-                </div> */}
-                <div>
-                    
-                    <select name="currentSexe" id="currentSexe" onChange={(f)=>setCurrentSexe(f.target.value)} value={currentSexe}>choix du sexe
-                    <option value="Male">Male</option> 
-                    <option value="Femelle">Femelle</option>
-                    <option value="Indefini">Indefini</option>
-                    </select>
-                </div>
-                <div>
-                    <label htmlFor="Age">Age</label>
-                    <input type="text"  id="Age" onChange={(f)=>setAge(f.target.value)} />
-                </div>
-                <div>
-                    <label htmlFor="Poids">Poids</label>
-                    <input type="text"  id="Poids" onChange={(f)=>setPoids(f.target.value)} />
-                </div>
-                <div>
-                    <label htmlFor="DateEntree">Date entree dans l'association</label>
-                    <input type="date"  id="DateEntree" onChange={(f)=>setDateEntree(f.target.value)} />
-                </div>
-                <div>
-                    <label htmlFor="Etat">Etat</label>
-                    <input type="text"  id="Etat" onChange={(f)=>setEtat(f.target.value)} />
-                </div>
-                <div>
-                    <label htmlFor="Traitement">Traitement administrer</label>
-                    <input type="text"  id="Traitement" onChange={(f)=>setTraitement(f.target.value)} />
-                </div>
-                <div>
-                    <label htmlFor="FamilleAccueil">Famille qui accueille</label>
-                    <input type="text"  id="FamilleAccueil" onChange={(f)=>setFamilleAccueil(f.target.value)} />
-                </div>
-                <div>
-                    <label htmlFor="Note">Note</label>
-                    <input type="text"  id="Note" onChange={(f)=>setNote(f.target.value)} />
-                </div>
+        <>
+        <Container className=''>
+            <h1>Ajouter un artichats</h1>
+            <hr />
+
+            <Form onSubmit={handleSubmit} method="POST" encType='multipart/form-data'>
+
+            <Form.Group controlId="fileName" className="mb-3">
+                <Form.Label>Upload Image</Form.Label>
+                <Form.Control
+                    type="file"
+                    name='image'
+                    onChange={(e) => setImage(e.target.files[0])}
+                    size="lg" />
+            </Form.Group>
+            <Form.Group className="" controlId="Nom">
+                    <Form.Label>Nom</Form.Label>
+                    <Form.Control
+                        value={Nom}
+                        onChange={(e) => setNom(e.target.value)}
+                        type="string"
+                      />
+                </Form.Group>
+
+                <Form.Group className="" controlId="sexe">
+                    <Form.Label>Sexe</Form.Label>
+                    <Form.Control
+                        value={currentSexe}
+                        onChange={(e) => setCurrentSexe(e.target.value)}
+                        type="string"
+                      />
+                </Form.Group>
+
+                <Form.Group className="" controlId="age">
+                    <Form.Label>Age ($)</Form.Label>
+                    <Form.Control
+                        value={Age}
+                        onChange={(e) => setAge(e.target.value)}
+                        type="number"
+                         />
+                </Form.Group>
+
+              
+                <Form.Group className="" controlId="Poids">
+                    <Form.Label>Poids</Form.Label>
+                    <Form.Control
+                        value={Poids}
+                        onChange={(e) => setPoids(e.target.value)}
+                        type="number"
+                        />
+                </Form.Group>
+                <Form.Group className="" controlId="DateEntree">
+                    <Form.Label>Date d'arrivee</Form.Label>
+                    <Form.Control
+                        value={DateEntree}
+                        onChange={(e) => setDateEntree(e.target.value)}
+                        type="dateonly"
+                      />
+                </Form.Group>
+                <Form.Group className="" controlId="Etat">
+                    <Form.Label>Etat</Form.Label>
+                    <Form.Control
+                        value={Etat}
+                        onChange={(e) => setEtat(e.target.value)}
+                        type="string"
+                      />
+                </Form.Group>
+                <Form.Group className="" controlId="Traitement">
+                    <Form.Label>Traitement reçu</Form.Label>
+                    <Form.Control
+                        value={Traitement}
+                        onChange={(e) => setTraitement(e.target.value)}
+                        type="string"
+                      />
+                </Form.Group>
+                <Form.Group className="" controlId="FamilleAccueil">
+                    <Form.Label>Famille d'accueil</Form.Label>
+                    <Form.Control
+                        value={FamilleAccueil}
+                        onChange={(e) => setFamilleAccueil(e.target.value)}
+                        type="string"
+                      />
+                </Form.Group>
+                <Form.Group className="" controlId="note">
+                    <Form.Label>Note</Form.Label>
+                    <Form.Control
+                        value={Note}
+                        onChange={(e) => setNote(e.target.value)}
+                        type="text"
+                      />
+                </Form.Group>
+
                
-                <button type='submit'>ajouter </button>
-            </form>
-        </section>
-    )
+
+
+                <Button variant="primary" type="submit">
+                    Add Product
+                </Button>
+            </Form>
+        </Container>
+    </>
+        )
 
 }
 export default AnimalInPost
