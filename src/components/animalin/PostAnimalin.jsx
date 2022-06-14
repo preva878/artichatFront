@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import axios from 'axios'
 
+
 import { Container, Form, Button } from 'react-bootstrap'
 
 
@@ -18,8 +19,8 @@ const AnimalInPost = ({history}) => {
     const [Image,setImage] = useState('');
     
         
-const handleSubmit = async (e) => {
-    e.preventDefault();
+const handleSubmit = async (f) => {
+    f.preventDefault()
     alert(`artichats encoder ${Nom},${currentSexe},${Age}`)
     
 const formData = new FormData()
@@ -51,14 +52,14 @@ history.push('/addAnimalIn')
                 <Form.Control
                     type="file"
                     name='image'
-                    onChange={(e) => setImage(e.target.files[0])}
+                    onChange={(f) => setImage(f.target.files[0])}
                     size="lg" />
             </Form.Group>
             <Form.Group className="" controlId="Nom">
                     <Form.Label>Nom</Form.Label>
                     <Form.Control
                         value={Nom}
-                        onChange={(e) => setNom(e.target.value)}
+                        onChange={(f) => setNom(f.target.value)}
                         type="string"
                       />
                 </Form.Group>
@@ -67,7 +68,7 @@ history.push('/addAnimalIn')
                     <Form.Label>Sexe</Form.Label>
                     <Form.Control
                         value={currentSexe}
-                        onChange={(e) => setCurrentSexe(e.target.value)}
+                        onChange={(f) => setCurrentSexe(f.target.value)}
                         type="string"
                       />
                 </Form.Group>
@@ -76,7 +77,7 @@ history.push('/addAnimalIn')
                     <Form.Label>Age ($)</Form.Label>
                     <Form.Control
                         value={Age}
-                        onChange={(e) => setAge(e.target.value)}
+                        onChange={(f) => setAge(f.target.value)}
                         type="number"
                          />
                 </Form.Group>
@@ -86,7 +87,7 @@ history.push('/addAnimalIn')
                     <Form.Label>Poids</Form.Label>
                     <Form.Control
                         value={Poids}
-                        onChange={(e) => setPoids(e.target.value)}
+                        onChange={(f) => setPoids(f.target.value)}
                         type="number"
                         />
                 </Form.Group>
@@ -94,7 +95,7 @@ history.push('/addAnimalIn')
                     <Form.Label>Date d'arrivee</Form.Label>
                     <Form.Control
                         value={DateEntree}
-                        onChange={(e) => setDateEntree(e.target.value)}
+                        onChange={(f) => setDateEntree(f.target.value)}
                         type="date"
                       />
                 </Form.Group>
@@ -102,7 +103,7 @@ history.push('/addAnimalIn')
                     <Form.Label>Etat</Form.Label>
                     <Form.Control
                         value={Etat}
-                        onChange={(e) => setEtat(e.target.value)}
+                        onChange={(f) => setEtat(f.target.value)}
                         type="string"
                       />
                 </Form.Group>
@@ -110,7 +111,7 @@ history.push('/addAnimalIn')
                     <Form.Label>Traitement reçu</Form.Label>
                     <Form.Control
                         value={Traitement}
-                        onChange={(e) => setTraitement(e.target.value)}
+                        onChange={(f) => setTraitement(f.target.value)}
                         type="string"
                       />
                 </Form.Group>
@@ -118,7 +119,7 @@ history.push('/addAnimalIn')
                     <Form.Label>Famille d'accueil</Form.Label>
                     <Form.Control
                         value={FamilleAccueil}
-                        onChange={(e) => setFamilleAccueil(e.target.value)}
+                        onChange={(f) => setFamilleAccueil(f.target.value)}
                         type="string"
                       />
                 </Form.Group>
@@ -126,7 +127,7 @@ history.push('/addAnimalIn')
                     <Form.Label>Note</Form.Label>
                     <Form.Control
                         value={Note}
-                        onChange={(e) => setNote(e.target.value)}
+                        onChange={(f) => setNote(f.target.value)}
                         type="text"
                       />
                 </Form.Group>
@@ -135,7 +136,7 @@ history.push('/addAnimalIn')
 
 
                 <Button variant="primary" type="submit">
-                    Add Product
+                    Add artichats
                 </Button>
             </Form>
         </Container>

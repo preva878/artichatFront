@@ -9,7 +9,7 @@ const ShowArtichats = () => {
 
     useEffect(()=> {
         const getArtichatsData = async () =>{
-            const {data} = await axios.get('http://localhost:3000/api/getAllAnimalIn')
+            const {data} = await axios.get('http://localhost:3001/api/getAllAnimalIn')
             console.log(data)
             setArtichats(data)
         }
@@ -24,9 +24,9 @@ const ShowArtichats = () => {
 
                <Row>
                     {
-                        Artichats.map(Artichats => {
-                            return <Col md={6} lg={4} sm={12} key={Artichats.id}>
-                                <AnimalInCard Artichats={Artichats} />
+                        Artichats.map(Artichat => {
+                            return <Col md={6} lg={4} sm={12} key={Artichat.id}>
+                                <AnimalInCard Artichat={Artichat} />
                             </Col>
                         })
                     }

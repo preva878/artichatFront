@@ -8,7 +8,7 @@ const AnimalInCard = ({Artichats}) => {
         <>
 
             <Card  style={{ width: '18rem' }}>
-                {/* <Card.Img src={product.image} /> */}
+                <Card.Img src={Artichats.Image} /> 
                 <Card.Body>
                     <Card.Title>Nom: {Artichats.Nom}</Card.Title>
                     <Card.Title>Famille: {Artichats.FamilleAccueil}</Card.Title>
