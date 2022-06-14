@@ -95,7 +95,7 @@ history.push('/addAnimalIn')
                     <Form.Control
                         value={DateEntree}
                         onChange={(e) => setDateEntree(e.target.value)}
-                        type="dateonly"
+                        type="date"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="Etat">
