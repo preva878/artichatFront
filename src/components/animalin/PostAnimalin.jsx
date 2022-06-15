@@ -53,7 +53,7 @@ history.push('/addAnimalIn')
                     type="file"
                     name='image'
                     onChange={(f) => setImage(f.target.files[0])}
-                    size="lg" />
+                    size="sm" />
             </Form.Group>
             <Form.Group className="" controlId="Nom">
                     <Form.Label>Nom</Form.Label>
