@@ -53,7 +53,7 @@ function App() {
           <Route path="page3" element={<Page3 />} />
           <Route path="page4" element={<Page4 />} />
           <Route path="AnimalInPost" element={<AnimalInPost />} />
-          {/* <Route path="AnimalOutPost" element={<AnimalOutPost />} /> */}
+          <Route path="AnimalOutPost" element={<AnimalOutPost />} />
           <Route path="page5" element={<Page5 />} />
           <Route path="FamilleAccueilPost" element={<FamilleAccueilPost />} />
           <Route path="AdoptantPost" element={<AdoptantPost />} />
