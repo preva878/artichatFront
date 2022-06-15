@@ -14,7 +14,7 @@ const AnimalInCard = ({animalIn}) => {
                     <Card.Title>Famille: {animalIn.FamilleAccueil}</Card.Title>
                     <Card.Title>Etat: {animalIn.Etat}</Card.Title>
                     <Card.Title>Date d'arrivée: {animalIn.DateEntree}</Card.Title>
-       
+                   
                     <Card.Subtitle>sexe: {animalIn.currentSexe}</Card.Subtitle>
                     {/* <Card.Text>
                         Note: {Artichat.Note.slice(0,100)}
