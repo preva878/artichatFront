@@ -8,24 +8,14 @@ const Layout = () => {
           <li>
             <Link to="/">Home</Link> {/* la page layout sert de navigateur*/ }
           </li>
-          <li>
-            <Link to="/Page1">page1essai</Link>
-          </li>
-          <li>
-            <Link to="/Page3">Page3</Link>
-          </li>
-          <li>
-            <Link to="/Page4" >Page4</Link>
-          </li>
+         
           <li>
             <Link to="/AnimalInPost">ajouter un artichat</Link>
           </li>
           <li>
             <Link to="/AnimalOutPost">Encoder un depart</Link>
           </li>
-         <li>
-           <Link to="/Page5">essaipage5</Link>
-         </li>
+        
          <li>
            <Link to='/FamilleAccueilPost'>encoder une familleaccueil</Link>
          </li>
@@ -36,9 +26,6 @@ const Layout = () => {
            <Link to='/ShowAnimalIns'>essai affiche animalin</Link>
          </li>
          <Link to='/ShowAnimalOuts' >affiches les artichats out</Link>
-         <li>
-
-         </li>
          
          <li>
            <Link to='/addProduct'>essaiproduct</Link>

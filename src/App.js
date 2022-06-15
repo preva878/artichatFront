@@ -1,8 +1,5 @@
-import Page1 from './components/page1';
-import Page2 from './components/pages/page2';
-import Page3 from './components/pages/Page3';
-import Page4 from './components/pages/page4';
-import Page5 from './components/pages/Page5';
+
+
 import AnimalInPost from './components/animalin/PostAnimalin';
 import AnimalOutPost from './components/animalout/PostAnimalOut';
 import FamilleAccueilPost from './components/familleaccueil/postFamilleAccueil';
@@ -50,12 +47,10 @@ function App() {
       
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="page1" element={<Page1 />} />
-          <Route path="page3" element={<Page3 />} />
-          <Route path="page4" element={<Page4 />} />
+          
           <Route path="AnimalInPost" element={<AnimalInPost />} />
           <Route path="AnimalOutPost" element={<AnimalOutPost />} />
-          <Route path="page5" element={<Page5 />} />
+         
           <Route path="FamilleAccueilPost" element={<FamilleAccueilPost />} />
           <Route path="AdoptantPost" element={<AdoptantPost />} />
           <Route path="ShowAnimalIns" element={<ShowAnimalIns />} />
