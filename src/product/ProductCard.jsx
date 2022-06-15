@@ -8,7 +8,7 @@ const ProductCard = ({ product }) => {
         <>
 
             <Card className='shadow-lg m-2 p-3 rounded' style={{ width: '18rem' }}>
-                <Card.Img src={product.image} />
+                <Card.Img src={`http://localhost:3000/${product.image}` }/>
                 <Card.Body>
                     <Card>id:{product.id}</Card>
                     <Card.Title>Title: {product.title}</Card.Title>

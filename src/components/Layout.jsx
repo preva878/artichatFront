@@ -33,7 +33,7 @@ const Layout = () => {
            <Link to='/AdoptantPost'>encoder adoptant</Link>
          </li>
          <li>
-           <Link to='/ShowAnimalIn'>essai afficheanimalin</Link>
+           <Link to='/ShowAnimalIns'>essai affiche animalin</Link>
          </li>
          
          <li>

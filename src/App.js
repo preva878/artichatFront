@@ -7,7 +7,7 @@ import AnimalInPost from './components/animalin/PostAnimalin';
 import AnimalOutPost from './components/animalout/PostAnimalOut';
 import FamilleAccueilPost from './components/familleaccueil/postFamilleAccueil';
 import AdoptantPost from './components/adoptant/PostAdoptant';
-import ShowAnimalin from './components/animalin/ShowAnimalIn';
+import ShowAnimalIns from './components/animalin/ShowAnimalIn';
 
 //
 import AddProduct from './product/screens/AddProduct';
@@ -53,11 +53,11 @@ function App() {
           <Route path="page3" element={<Page3 />} />
           <Route path="page4" element={<Page4 />} />
           <Route path="AnimalInPost" element={<AnimalInPost />} />
-          <Route path="AnimalOutPost" element={<AnimalOutPost />} />
+          {/* <Route path="AnimalOutPost" element={<AnimalOutPost />} /> */}
           <Route path="page5" element={<Page5 />} />
           <Route path="FamilleAccueilPost" element={<FamilleAccueilPost />} />
           <Route path="AdoptantPost" element={<AdoptantPost />} />
-          <Route path="ShowAnimalin" element={<ShowAnimalin />} />
+          <Route path="ShowAnimalIns" element={<ShowAnimalIns />} />
           <Route path="AddProduct" element={<AddProduct />} />
           <Route path="ShowProducts" element={<ShowProducts />} />
           
