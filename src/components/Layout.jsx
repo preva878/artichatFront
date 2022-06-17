@@ -33,6 +33,21 @@ const Layout = () => {
           <li>
             <Link to='/showProducts' >essaishowproduct</Link>
           </li>
+          <li>
+            <Link to='/addAdoptant'  >ajouter un adoptant</Link>
+          </li>
+          <li>
+            <Link to='/ShowAdoptants'  >show adoptants</Link>
+          </li>
+          <li>
+            <Link to='/PostSponsor' > ajouter un sponsor</Link>
+          </li>
+          <li>
+            <Link to='/EquipementPost' >ajouter de l equipement</Link>
+          </li>
+          <li>
+            <Link to="/ShowEquipements" > liste des equipements</Link>
+          </li>
         </ul>
       </nav>
 
