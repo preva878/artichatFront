@@ -35,6 +35,7 @@ const VeterinairePost = ({history}) => {
     await axios.post('http://localhost:3000/api/post/postVeterinaire',formData)
     history.push('/post/postVeterinaire')
     } 
+    //ne arche pas,pq.....
 
         return(
             <>

@@ -34,6 +34,7 @@ const handleSubmit = async (f) => {
     await axios.post('http://localhost:3000/api/sponsor/addSponsor',formData)
     history.push('/sponsor/addSponsor')
 }
+//ne marche pas
     return (
         <>
         
