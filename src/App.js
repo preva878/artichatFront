@@ -10,6 +10,8 @@ import AddAdoptant from './components/adoptant/PostAdoptant';
 import SponsorPost from './components/sponsor/PostSponsor';
 import Postequipement from './components/equipements/postEquipements';
 import ShowEquipements from './components/equipements/ShowEquipements';
+import VeterinairePost from './components/veterinaire/PostVeterinaire';
+
 
 //
 import AddProduct from './product/screens/AddProduct';
@@ -67,6 +69,7 @@ function App() {
           <Route path="PostSponsor" element={<SponsorPost />} />
           <Route path="EquipementPost" element={<Postequipement />} />
           <Route path="ShowEquipements" element={<ShowEquipements />} />
+          <Route path="VeterinairePost" element={<VeterinairePost />} />
           
            
          

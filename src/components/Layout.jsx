@@ -48,6 +48,9 @@ const Layout = () => {
           <li>
             <Link to="/ShowEquipements" > liste des equipements</Link>
           </li>
+          <li>
+            <Link to='/VeterinairePost' > ajouter un veterinaire</Link>
+          </li>
         </ul>
       </nav>
 
