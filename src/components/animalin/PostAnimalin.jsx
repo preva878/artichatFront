@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import axios from 'axios'
+import {FormGroup} from '@mui/material/FormGroup';
 
 
 import { Container, Form, Button } from 'react-bootstrap'
@@ -8,7 +9,7 @@ import { Container, Form, Button } from 'react-bootstrap'
 const AnimalInPost = ({history}) => {
 
     const [Nom,setNom] = useState('');
-    const [currentSexe, setCurrentSexe] = useState('Indefini');
+    const [currentSexe, setCurrentSexe] = useState('');
     const [Age,setAge] = useState('');
     const [Poids,setPoids] = useState('');
     const [DateEntree,setDateEntree] = useState('');
@@ -36,8 +37,10 @@ formData.append('Traitement',Traitement)
 formData.append('FamilleAccueil',FamilleAccueil)
 formData.append('Note',Note)
 
+
 await axios.post('http://localhost:3000/api/addAnimalIn',formData)
 history.push('/addAnimalIn')
+console.log(formData)
 }
     return (
         <>
@@ -64,14 +67,20 @@ history.push('/addAnimalIn')
                       />
                 </Form.Group>
 
-                <Form.Group className="" controlId="sexe">
-                    <Form.Label>Sexe</Form.Label>
-                    <Form.Control
-                        value={currentSexe}
-                        onChange={(f) => setCurrentSexe(f.target.value)}
-                        type="string"
-                      />
-                </Form.Group>
+                <Form.Group fullWidth>
+  <Form.Label>Age</Form.Label>
+  <select
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
+    value={currentSexe}
+    label="sexe"
+    onChange={(f) => setCurrentSexe(f.target.value) }
+  >
+    <option value={"male"}>male</option>
+    <option value={"femelle"}>femelle</option>
+    <option value={"inconnu"}>inconnu</option>
+  </select>
+</Form.Group>
 
                 <Form.Group className="" controlId="age">
                     <Form.Label>Age ($)</Form.Label>

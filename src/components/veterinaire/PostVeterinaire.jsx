@@ -32,8 +32,10 @@ const VeterinairePost = ({history}) => {
     formData.append('Artichats',Artichats)
     formData.append('Notes',Notes)
 
-    await axios.post('http://localhost:3000/api/post/postVeterinaire',formData)
-    history.push('/post/postVeterinaire')
+    
+    await axios.post('http://localhost:3000/api/postVeterinaire',formData)
+    history.push('/postVeterinaire')
+    console.log(Nom)
     } 
     //ne arche pas,pq.....
 
