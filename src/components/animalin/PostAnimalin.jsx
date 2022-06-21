@@ -68,10 +68,9 @@ console.log(formData)
                 </Form.Group>
 
                 <Form.Group fullWidth>
-  <Form.Label>Age</Form.Label>
+  <Form.Label>Sexe</Form.Label>
   <select
-    labelId="demo-simple-select-label"
-    id="demo-simple-select"
+   
     value={currentSexe}
     label="sexe"
     onChange={(f) => setCurrentSexe(f.target.value) }
@@ -83,7 +82,7 @@ console.log(formData)
 </Form.Group>
 
                 <Form.Group className="" controlId="age">
-                    <Form.Label>Age ($)</Form.Label>
+                    <Form.Label>Age </Form.Label>
                     <Form.Control
                         value={Age}
                         onChange={(f) => setAge(f.target.value)}
