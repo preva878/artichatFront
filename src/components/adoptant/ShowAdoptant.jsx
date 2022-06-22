@@ -19,20 +19,19 @@ const ShowAdoptants = () => {
     return(
         <>
         <Container>
-<h1>encoder les Adoptants</h1>
-<hr />
-
-<Row>
-
-    {
-        Adoptants.map(adoptant => {
+        <h1>encoder les Adoptants</h1>
+        <hr />
+        
+        <Row>
+        {
+            Adoptants.map(adoptant => {
+                
             return <Col md={6} lg={4} key={adoptant.id}>
                 <AdoptantCard adoptant={adoptant}></AdoptantCard>
             </Col> 
         })
     }
 </Row>
-
         </Container>
         
         </>

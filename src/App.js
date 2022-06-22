@@ -1,4 +1,4 @@
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import AnimalInPost from './components/animalin/PostAnimalin';
 import AnimalOutPost from './components/animalout/PostAnimalOut';

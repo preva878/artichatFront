@@ -44,7 +44,7 @@ console.log(formData)
 }
     return (
         <>
-        <Container className=''>
+        <Container className='mt-5 p-2'>
             <h1>Ajouter un artichats</h1>
             <hr />
 

@@ -17,7 +17,7 @@ const ProductCard = ({ product }) => {
                         Description: {product.description.slice(0,10)}...
                     </Card.Text>
                  
-                    <Link to={`product/${product.id}`}>
+                    <Link to={`/product/${product.id}`}>
                         <Button>Detail</Button>
                     </Link>
                 </Card.Body>

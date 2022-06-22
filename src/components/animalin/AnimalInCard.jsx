@@ -16,9 +16,10 @@ const AnimalInCard = ({animalIn}) => {
                     <Card.Title>Date d'arrivée: {animalIn.DateEntree}</Card.Title>
                    
                     <Card.Subtitle>sexe: {animalIn.currentSexe}</Card.Subtitle>
-                    {/* <Card.Text>
-                        Note: {Artichat.Note.slice(0,100)}
-                    </Card.Text> */}
+                     <Card.Text>
+                        Note: {animalIn.Note.slice(0,100)}
+                    </Card.Text> 
+                    <Link to={``}><Button>Detail</Button></Link>
                     
                 </Card.Body>
 

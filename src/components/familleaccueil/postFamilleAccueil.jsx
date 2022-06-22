@@ -31,6 +31,7 @@ const FamilleAccueilPost = ({history}) => {
 
         await axios.post('http://localhost:3000/api/addFamilleAccueil',formData)
         history.push('/addFamilleAccueil')
+        
     //ne marche pas
     }
     return(
@@ -39,7 +40,7 @@ const FamilleAccueilPost = ({history}) => {
             <h1>Ajouter une Famille d'accueil</h1>
             <hr />
 
-            <Form onSubmit={handleSubmit} method="POST" encType='multipart/form-data' >
+            <Form onSubmit={handleSubmit} method="POST"  >
 
             <Form.Group controlId="Nom">
                 <Form.Label>Nom</Form.Label>

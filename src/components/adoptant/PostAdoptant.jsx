@@ -1,11 +1,14 @@
 import {useState} from 'react'
 import axios from 'axios'
-import { Button, Icon } from 'semantic-ui-react'
+import { Row, Col} from 'react-bootstrap'
+import {FormGroup} from '@mui/material/FormGroup';
 
+
+import { Container, Form, Button } from 'react-bootstrap'
 
 
 const AdoptantPost = ({history}) => {
-
+    const [Image,setImage] = useState("");
     const [Nom,setNom] = useState("");
     const [Adresse,setAdresse] = useState("");
     const [CP,setCp] = useState("");
@@ -16,13 +19,13 @@ const AdoptantPost = ({history}) => {
     const [Note,setNote] = useState("");
    
     
-    const handleSubmit = async (i) => {
-        i.preventDefault();
+    const handleSubmit = async (f) => {
+        f.preventDefault();
         alert(`Adoptant ${Nom} ajouter avec l' Artichats ${Artichats}`)
 
       const formData=new FormData()
       
-       
+       formData.append('Image',Image)
         formData.append('Nom',Nom)
         formData.append('Adresse',Adresse)
         formData.append('CP',CP)
@@ -36,48 +39,92 @@ const AdoptantPost = ({history}) => {
         history.push('/addAdoptant')
     };
     return(
-        <section>
-            <h2>ajouter une famille d'adoptant</h2>
-            
-            <form action="" method="post" onSubmit={handleSubmit}>
-     
-                
-                <div>
-                    <label htmlFor="Nom">nom de la famille qui adopte</label>
-                    <input type="text" id='Nom' onChange={(i) => setNom(i.target.value) } />
-                </div>
-                <div>
-                    <label htmlFor="Adresse">Adresse de l'adoptant</label>
-                    <input type="text" id='Adresse' onChange={(i) => setAdresse(i.target.value) } />
-                </div>
-                <div>
-                    <label htmlFor="CP">Code Postal</label>
-                    <input type="text" id='CP' onChange={(i) => setCp(i.target.value) } />
-                </div>
-                <div>
-                    <label htmlFor="Ville">Ville</label>
-                    <input type="text" id='Ville' onChange={(i) => setVille(i.target.value) } />
-                </div>
-                <div>
-                    <label htmlFor="ContactMail">adresse email</label>
-                    <input type='email' id='ContactMail' onChange={(i) => setContactMail(i.target.value) } />
-                </div>
-                <div>
-                    <label htmlFor="ContactPortable">contact telephone</label>
-                    <input type="tel" id='ContactPortable' onChange={(i) => setContactPortable(i.target.value) } />
-                </div>
-                <div>
-                    <label htmlFor="Artichats">nom de l'artichats adopter</label>
-                    <input type="text" id='Artichats' onChange={(i) => setArtichats(i.target.value) } />
-                </div>
-                <div>
-                    <label htmlFor="Notes">Notes:</label>
-                    <input type="text" id='Notes' onChange={(i) => setNote(i.target.value) } />
-                </div>
-                <button type='submit'>ajouter </button>
         
-            </form>
-        </section>
+        <>
+        <Container>
+            <h1>ajouter une famille d'adoptant</h1>
+            <hr />
+
+            <Form onSubmit={handleSubmit} method="POST" encType='multipart/form-data' >
+            <Form.Group controlId="fileName" className="mb-3">
+                <Form.Label>Upload Image</Form.Label>
+                <Form.Control
+                    type="file"
+                    name='image'
+                    onChange={(f) => setImage(f.target.files[0])}
+                    size="sm" />
+            </Form.Group>
+            <Form.Group className="" controlId="Nom">
+                    <Form.Label>Nom</Form.Label>
+                    <Form.Control
+                        value={Nom}
+                        onChange={(f) => setNom(f.target.value)}
+                        type="string"
+                      />
+                </Form.Group>
+
+                <Form.Group className="" controlId="Adresse">
+                    <Form.Label>Adresse, rue et numero</Form.Label>
+                    <Form.Control
+                        value={Adresse}
+                        onChange={(f) => setAdresse(f.target.value)}
+                        type="string"
+                      />
+                </Form.Group>
+                <Form.Group className="" controlId="CP">
+                    <Form.Label>Code postal</Form.Label>
+                    <Form.Control
+                        value={CP}
+                        onChange={(f) => setCp(f.target.value)}
+                        type="number"
+                      />
+                </Form.Group>
+                <Form.Group className="" controlId="Ville">
+                    <Form.Label>Ville</Form.Label>
+                    <Form.Control
+                        value={Ville}
+                        onChange={(f) => setVille(f.target.value)}
+                        type="string"
+                      />
+                </Form.Group>
+                <Form.Group className="" controlId="ContactMail">
+                    <Form.Label>Email de contact</Form.Label>
+                    <Form.Control
+                        value={ContactMail}
+                        onChange={(f) => setContactMail(f.target.value)}
+                        type="mail"
+                      />
+                </Form.Group>
+                <Form.Group className="" controlId="ContactPortable">
+                    <Form.Label>num de contact</Form.Label>
+                    <Form.Control
+                        value={ContactPortable}
+                        onChange={(f) => setContactPortable(f.target.value)}
+                        type="string"
+                      />
+                </Form.Group>
+                <Form.Group className="" controlId="Artichats">
+                    <Form.Label>Artichats</Form.Label>
+                    <Form.Control
+                        value={Artichats}
+                        onChange={(f) => setArtichats(f.target.value)}
+                        type="string"
+                      />
+                </Form.Group>
+                <Form.Group className="" controlId="Note">
+                    <Form.Label>Note</Form.Label>
+                    <Form.Control
+                        value={Note}
+                        onChange={(f) => setNote(f.target.value)}
+                        type="string"
+                      />
+                </Form.Group>
+                <Button variant="primary" type="submit">
+                    Add artichats
+                </Button>
+            </Form>
+            </Container>
+            </>
     )
 
 

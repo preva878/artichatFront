@@ -40,7 +40,7 @@ const EditProduct = () => {
             published: published
         }
 
-        await axios.put(`/api/products/${id}`, data)
+        await axios.put(`http://localhost:3000/api/products/${id}`, data)
 
         navigate.push('/products')
 
