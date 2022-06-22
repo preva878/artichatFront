@@ -46,14 +46,8 @@ const AdoptantPost = ({history}) => {
             <hr />
 
             <Form onSubmit={handleSubmit} method="POST" encType='multipart/form-data' >
-            <Form.Group controlId="fileName" className="mb-3">
-                <Form.Label>Upload Image</Form.Label>
-                <Form.Control
-                    type="file"
-                    name='image'
-                    onChange={(f) => setImage(f.target.files[0])}
-                    size="sm" />
-            </Form.Group>
+            
+           
             <Form.Group className="" controlId="Nom">
                     <Form.Label>Nom</Form.Label>
                     <Form.Control

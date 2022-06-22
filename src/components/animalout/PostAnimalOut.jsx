@@ -82,12 +82,16 @@ const handleSubmit = async (f) => {
                 </Form.Group>
 
                 <Form.Group className="" controlId="SexeDefini">
-                    <Form.Label>Sexe definitif</Form.Label>
-                    <Form.Control
+                    <Form.Label>Sexe definitif </Form.Label>
+                    <select
                         value={SexeDefini}
                         onChange={(f) => setSexeDefini(f.target.value)}
                         type="string"
-                      />
+                      >
+                        <option value={"male"}>male</option>
+                        <option value={"femelle"}>femelle</option>
+                        
+                        </select>
                 </Form.Group>
                 <Form.Group className="" controlId="Particularite">
                     <Form.Label>Particularite</Form.Label>
@@ -106,7 +110,7 @@ const handleSubmit = async (f) => {
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="Poids">
-                    <Form.Label>Poids</Form.Label>
+                    <Form.Label>Poids en gramme</Form.Label>
                     <Form.Control
                         value={Poids}
                         onChange={(f) => setPoids(f.target.value)}

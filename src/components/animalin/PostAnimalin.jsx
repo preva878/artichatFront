@@ -66,20 +66,20 @@ console.log(formData)
                         type="string"
                       />
                 </Form.Group>
-
+<hr />
                 <Form.Group fullWidth>
-  <Form.Label>Sexe</Form.Label>
-  <select
-   
-    value={currentSexe}
-    label="sexe"
-    onChange={(f) => setCurrentSexe(f.target.value) }
-  >
-    <option value={"male"}>male</option>
-    <option value={"femelle"}>femelle</option>
-    <option value={"inconnu"}>inconnu</option>
-  </select>
-</Form.Group>
+                    <Form.Label>Sexe</Form.Label>
+                    <select
+
+                        value={currentSexe}
+                        label="sexe"
+                        onChange={(f) => setCurrentSexe(f.target.value) }
+                    >
+                        <option value={"male"}>male</option>
+                        <option value={"femelle"}>femelle</option>
+                        <option value={"inconnu"}>inconnu</option>
+                    </select>
+                    </Form.Group>
 
                 <Form.Group className="" controlId="age">
                     <Form.Label>Age </Form.Label>
@@ -92,7 +92,7 @@ console.log(formData)
 
               
                 <Form.Group className="" controlId="Poids">
-                    <Form.Label>Poids</Form.Label>
+                    <Form.Label>Poids en gramme</Form.Label>
                     <Form.Control
                         value={Poids}
                         onChange={(f) => setPoids(f.target.value)}
@@ -107,13 +107,18 @@ console.log(formData)
                         type="date"
                       />
                 </Form.Group>
+                <hr />
                 <Form.Group className="" controlId="Etat">
                     <Form.Label>Etat</Form.Label>
-                    <Form.Control
+                   <select 
                         value={Etat}
                         onChange={(f) => setEtat(f.target.value)}
                         type="string"
-                      />
+                        >
+                            <option value={"Vivant"}>Vivant</option>
+                        <option value={"Malade"}>Malade</option>
+                        <option value={"Decede"}>Decede</option>
+                        </select>
                 </Form.Group>
                 <Form.Group className="" controlId="Traitement">
                     <Form.Label>Traitement reçu</Form.Label>
