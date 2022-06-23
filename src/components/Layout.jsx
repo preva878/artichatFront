@@ -62,22 +62,13 @@ const Layout = () => {
         <Nav.Link as={Link} to="/VeterinairePost">Ajouter un veterinaire</Nav.Link>
         
         </NavDropdown>
+        <Link to="">faq</Link>
       </Nav>
     </Navbar.Collapse>
   </Container>
   
 </Navbar>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link> {/* la page layout sert de navigateur*/ }
-          </li>
-         
-         
-       
-          
-        </ul>
-      </nav>
+     
 
       <Outlet />
     </>
