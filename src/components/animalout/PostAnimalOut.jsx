@@ -70,6 +70,7 @@ const handleSubmit = async (f) => {
                         value={Nom}
                         onChange={(f) => setNom(f.target.value)}
                         type="string"
+                        placeholder="Nom en arrivant"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="NomDefinitif">
@@ -78,6 +79,7 @@ const handleSubmit = async (f) => {
                         value={NomDefinitif}
                         onChange={(f) => setNomDefinitif(f.target.value)}
                         type="string"
+                        placeholder="Nom officiel"
                       />
                 </Form.Group>
 
@@ -99,6 +101,7 @@ const handleSubmit = async (f) => {
                         value={Particularite}
                         onChange={(f) => setParticularite(f.target.value)}
                         type="string"
+                        placeholder="tricolore,chat poilus, chat a calin, etc..."
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="Age">
@@ -107,6 +110,7 @@ const handleSubmit = async (f) => {
                         value={Age}
                         onChange={(f) => setAge(f.target.value)}
                         type="number"
+                        placeholder="Age au depart"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="Poids">
@@ -115,6 +119,7 @@ const handleSubmit = async (f) => {
                         value={Poids}
                         onChange={(f) => setPoids(f.target.value)}
                         type="number"
+                        placeholder="Poids au depart"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="Etat">
@@ -123,6 +128,7 @@ const handleSubmit = async (f) => {
                         value={Etat}
                         onChange={(f) => setEtat(f.target.value)}
                         type="string"
+                        placeholder="Vivant,decede,disparu"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="Vaccin">
@@ -131,6 +137,7 @@ const handleSubmit = async (f) => {
                         value={Vaccin}
                         onChange={(f) => setVaccin(f.target.value)}
                         type="boolean"
+                        placeholder="vaccine ou non?"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="DateVaccin">
@@ -139,6 +146,7 @@ const handleSubmit = async (f) => {
                         value={DateVaccin}
                         onChange={(f) => setDateVaccin(f.target.value)}
                         type="date"
+                        placeholder="Date du vaccin"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="Puce">
@@ -147,6 +155,7 @@ const handleSubmit = async (f) => {
                         value={Puce}
                         onChange={(f) => setPuce(f.target.value)}
                         type="number"
+                        placeholder="Numero de la puce"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="Sterilisation">
@@ -155,6 +164,7 @@ const handleSubmit = async (f) => {
                         value={Sterilisation}
                         onChange={(f) => setSterilisation(f.target.value)}
                         type="boolean"
+                        placeholder="steriliser oui ou non?"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="DateSterilisation">
@@ -163,6 +173,7 @@ const handleSubmit = async (f) => {
                         value={DateSterilisation}
                         onChange={(f) => setdateSterilisation(f.target.value)}
                         type="date"
+                        placeholder="Date de la sterilisation"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="Adoptant">
@@ -171,6 +182,7 @@ const handleSubmit = async (f) => {
                         value={Adoptant}
                         onChange={(f) => setAdoptant(f.target.value)}
                         type="string"
+                        placeholder="Nom des adoptants"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="DateDepart">
@@ -179,6 +191,7 @@ const handleSubmit = async (f) => {
                         value={DateDepart}
                         onChange={(f) => setDateDepart(f.target.value)}
                         type="date"
+                        placeholder="Date du grand depart"
                       />
                 </Form.Group>
 

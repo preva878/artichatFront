@@ -58,21 +58,23 @@ const AddProduct = ({ history }) => {
                         size="lg" />
                 </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="title">
-                        <Form.Label>Title</Form.Label>
+                    <Form.Group className="mb-3" controlId="Nom">
+                        <Form.Label>Nom</Form.Label>
                         <Form.Control
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
                             type="text"
+                            placeholder="Nom de l objet en vente"
                           />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="price">
-                        <Form.Label>Price ($)</Form.Label>
+                        <Form.Label>Prix en euro</Form.Label>
                         <Form.Control
                             value={price}
                             onChange={(e) => setPrice(e.target.value)}
                             type="number"
+                            placeholder="prix"
                              />
                     </Form.Group>
 
@@ -83,16 +85,11 @@ const AddProduct = ({ history }) => {
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
                             as="textarea"
+                            placeholder="description"
                             />
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="publishedCheckedid">
-                        <Form.Check
-                            type="checkbox"
-                            onChange={(e) => setPublished(e.target.checked)}
-                            label="publish"
-                           />
-                    </Form.Group>
+                  
 
 
                     <Button variant="primary" type="submit">

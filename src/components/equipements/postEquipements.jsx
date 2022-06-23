@@ -15,7 +15,7 @@ const EquipementPost = ({history}) => {
     const [DatePeremption,setDatePeremption] = useState('');
     const [Etats,setEtats] = useState('');
 
-    const handleSubmit = async (e) =>{
+    const handleSubmit = async (e) => {
         e.preventDefault()
         alert(`Equipement ${Nom} ajouter`)
 
@@ -48,6 +48,7 @@ const EquipementPost = ({history}) => {
                         name= "image"
                         onChange={(e) => setImage(e.target.files[0])}
                         size="sm"
+                        
                         />
                     </Form.Group>
 
@@ -57,6 +58,7 @@ const EquipementPost = ({history}) => {
                         value={Nom}
                         onChange={(e) => setNom(e.target.value)}
                         type="string"
+                        placeholder="Nom de la marque"
                       />
                 </Form.Group>
 
@@ -66,6 +68,7 @@ const EquipementPost = ({history}) => {
                         value={Types}
                         onChange={(e) => setTypes(e.target.value)}
                         type="string"
+                        placeholder="types d'equipemet,boite,croquette,autres"
                       />
                 </Form.Group>
 
@@ -75,6 +78,7 @@ const EquipementPost = ({history}) => {
                         value={Quantite}
                         onChange={(e) => setQuantite(e.target.value)}
                         type="number"
+                        placeholder="Quantite reçue"
                       />
                 </Form.Group>
 
@@ -84,6 +88,7 @@ const EquipementPost = ({history}) => {
                         value={DateEntree}
                         onChange={(e) => setDateEntree(e.target.value)}
                         type="date"
+                        placeholder="date de reception"
                       />
                 </Form.Group>
 
@@ -93,6 +98,7 @@ const EquipementPost = ({history}) => {
                         value={DatePeremption}
                         onChange={(e) => setDatePeremption(e.target.value)}
                         type="date"
+                        placeholder="date de peremption si il y a"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="Etats">
@@ -101,6 +107,7 @@ const EquipementPost = ({history}) => {
                         value={Etats}
                         onChange={(e) => setEtats(e.target.value)}
                         type="string"
+                        placeholder="Bon,use,utilise,tres sale"
                       />
                 </Form.Group>
                 <Button variant="primary" type="submit">

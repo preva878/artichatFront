@@ -85,9 +85,7 @@ function App() {
       </Routes>
     </BrowserRouter>
          
-    <main className="App">
-      <Login />
-    </main>
+    
         </div>
       </header>
       

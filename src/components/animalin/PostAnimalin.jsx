@@ -56,14 +56,16 @@ console.log(formData)
                     type="file"
                     name='image'
                     onChange={(f) => setImage(f.target.files[0])}
-                    size="sm" />
+                    size="sm" 
+                    />
             </Form.Group>
-            <Form.Group className="" controlId="Nom">
+            <Form.Group className="" controlId="Nom" placeholder="essai">
                     <Form.Label>Nom</Form.Label>
                     <Form.Control
                         value={Nom}
                         onChange={(f) => setNom(f.target.value)}
                         type="string"
+                        placeholder="Nom de l'animal"
                       />
                 </Form.Group>
 <hr />
@@ -87,6 +89,7 @@ console.log(formData)
                         value={Age}
                         onChange={(f) => setAge(f.target.value)}
                         type="number"
+                        placeholder="Age estimer"
                          />
                 </Form.Group>
 
@@ -97,6 +100,7 @@ console.log(formData)
                         value={Poids}
                         onChange={(f) => setPoids(f.target.value)}
                         type="number"
+                        placeholder="Poids en grammes"
                         />
                 </Form.Group>
                 <Form.Group className="" controlId="DateEntree">
@@ -105,6 +109,7 @@ console.log(formData)
                         value={DateEntree}
                         onChange={(f) => setDateEntree(f.target.value)}
                         type="date"
+                        placeholder="Date d'arrivee"
                       />
                 </Form.Group>
                 <hr />
@@ -114,6 +119,7 @@ console.log(formData)
                         value={Etat}
                         onChange={(f) => setEtat(f.target.value)}
                         type="string"
+                        placeholder="Etat:malade,vivant,decede"
                         >
                             <option value={"Vivant"}>Vivant</option>
                         <option value={"Malade"}>Malade</option>
@@ -126,6 +132,7 @@ console.log(formData)
                         value={Traitement}
                         onChange={(f) => setTraitement(f.target.value)}
                         type="string"
+                        placeholder="traitement reçu"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="FamilleAccueil">
@@ -134,6 +141,7 @@ console.log(formData)
                         value={FamilleAccueil}
                         onChange={(f) => setFamilleAccueil(f.target.value)}
                         type="string"
+                        placeholder="Famille d'accueil qui le reçoit"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="note">
@@ -142,6 +150,7 @@ console.log(formData)
                         value={Note}
                         onChange={(f) => setNote(f.target.value)}
                         type="text"
+                        placeholder="Notes"
                       />
                 </Form.Group>
 

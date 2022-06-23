@@ -1,4 +1,4 @@
-
+import Button from '@restart/ui/esm/Button'
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
@@ -24,7 +24,9 @@ const AnimalInCard = ({animalIn}) => {
                         Note: {animalIn.Note.slice(0,100)}
                     </Card.Text> 
                     
-                    
+                    {/* <Link to={`/FicheAnimalIn`}>
+                        <Button>Detail</Button>
+                    </Link> */}
                 </Card.Body>
 
                 

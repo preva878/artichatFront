@@ -1,11 +1,12 @@
 import { Outlet, Link } from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Container, Form, Button } from 'react-bootstrap'
 import '../components/layout.css'
 
-
+import logo from '../logo.png'
 
 
 const Layout = () => {
@@ -17,54 +18,54 @@ const Layout = () => {
     
     <>
   
-    <Navbar   >
+    <Navbar expand="md"  >
+    <img src={logo} />
   <Container>
     <Navbar.Brand href="/">Bienvenue</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="Navbar">
         
-        {/* <Link to="/AnimalInPost">ajouter un artichat</Link>
-        <Link to='/ShowAnimalIns'>essai affiche animalin</Link>
-        <Link to="/AnimalOutPost">Encoder un depart</Link>
-        <Link to='/ShowAnimalOuts' >affiches les artichats out</Link> */}
-        {/* /**a separer */ }
-        {/* <Link to='/EquipementPost' >ajouter de l equipement</Link>
-        <Link to="/ShowEquipements" > liste des equipements</Link>
-        <Link to='/addProduct'>essaiproduct</Link>
-        <Link to='/showProducts' >essaishowproduct</Link> */}
-        {/* /**a separer */ }
-        {/* <Link to='/addAdoptant'  >ajouter un adoptant</Link>
-        <Link to='/ShowAdoptants'  >show adoptants</Link> */}
+       
       
 
 
         <NavDropdown title="Pour les artichats" id="basic-nav-dropdown">
-          <NavDropdown.Item href="/AnimalInPost">Ajouter un In</NavDropdown.Item>
-          <NavDropdown.Item href="/ShowAnimalIns">Show allIN</NavDropdown.Item>
-          <NavDropdown.Item href="/AnimalOutPost">Ajouter un depart</NavDropdown.Item>
-          <NavDropdown.Item href="/ShowAnimalOuts">Show depart</NavDropdown.Item>
+        <Nav.Link as={Link} to="/AnimalInPost">Ajouter un In </Nav.Link>
+        <Nav.Link as={Link} to="/ShowAnimalIns">Show allIN </Nav.Link>
+        <Nav.Link as={Link} to="/AnimalOutPost">Ajouter un depart </Nav.Link>
+        <Nav.Link as={Link} to="/ShowAnimalOuts">Show depart </Nav.Link>
+       
+          
           <NavDropdown.Divider />
           
         </NavDropdown>
         <NavDropdown title="Pour FA et Adoptants" id="basic-nav-dropdown">
-          <NavDropdown.Item href="/addAdoptant">Ajouter un adoptant</NavDropdown.Item>
-          <NavDropdown.Item href="/ShowAdoptants">liste des adoptants</NavDropdown.Item>
+          <Nav.Link as={Link} to="/addAdoptant">Ajouter un adoptant</Nav.Link>
+          <Nav.Link as={Link} to="/ShowAdoptants">liste des adoptants</Nav.Link>
           
           <NavDropdown.Divider />
           
         </NavDropdown>
         <NavDropdown title="Equipement et produit" id="basic-nav-dropdown">
-          <NavDropdown.Item href="/EquipementPost">Ajouter un equipement</NavDropdown.Item>
-          <NavDropdown.Item href="/ShowEquipements">Liste d 'equipement</NavDropdown.Item>
-          <NavDropdown.Item href="/addProduct">Ajouter un produit</NavDropdown.Item>
-          <NavDropdown.Item href="/showProducts">Montrer les produits</NavDropdown.Item>
+          <Nav.Link as={Link} to="/EquipementPost">Ajouter un equipement</Nav.Link>
+          <Nav.Link as={Link} to="/ShowEquipements">Liste d 'equipement</Nav.Link>
+          <Nav.Link as={Link} to="/addProduct">Ajouter un produit</Nav.Link>
+          <Nav.Link as={Link} to="/showProducts">Montrer les produits</Nav.Link>
           <NavDropdown.Divider />
 
+        </NavDropdown>
+
+        <NavDropdown title="ne marche pas" id="basic-nav-dropdown">
+        <Nav.Link as={Link} to="/FamilleAccueilPost">Ajouter un Famille d'accueil</Nav.Link>
+        <Nav.Link as={Link} to="/PostSponsor">Ajouter un sponsor</Nav.Link>
+        <Nav.Link as={Link} to="/VeterinairePost">Ajouter un veterinaire</Nav.Link>
+        
         </NavDropdown>
       </Nav>
     </Navbar.Collapse>
   </Container>
+  
 </Navbar>
       <nav>
         <ul>
@@ -73,16 +74,6 @@ const Layout = () => {
           </li>
          
          
-          <li>ne fonctionne pas</li>
-         <li>
-           <Link to='/FamilleAccueilPost'>encoder une familleaccueil</Link>
-         </li>
-          <li>
-            <Link to='/PostSponsor' > ajouter un sponsor</Link>
-          </li>
-          <li>
-            <Link to='/VeterinairePost' > ajouter un veterinaire</Link>
-          </li>
        
           
         </ul>

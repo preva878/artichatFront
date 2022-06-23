@@ -54,6 +54,7 @@ const AdoptantPost = ({history}) => {
                         value={Nom}
                         onChange={(f) => setNom(f.target.value)}
                         type="string"
+                        placeholder="Nom de reference pour les adoptants"
                       />
                 </Form.Group>
 
@@ -63,6 +64,7 @@ const AdoptantPost = ({history}) => {
                         value={Adresse}
                         onChange={(f) => setAdresse(f.target.value)}
                         type="string"
+                        placeholder="Rue et numero"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="CP">
@@ -71,6 +73,7 @@ const AdoptantPost = ({history}) => {
                         value={CP}
                         onChange={(f) => setCp(f.target.value)}
                         type="number"
+                        placeholder="Code postal"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="Ville">
@@ -79,6 +82,7 @@ const AdoptantPost = ({history}) => {
                         value={Ville}
                         onChange={(f) => setVille(f.target.value)}
                         type="string"
+                        placeholder="Ville"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="ContactMail">
@@ -87,6 +91,7 @@ const AdoptantPost = ({history}) => {
                         value={ContactMail}
                         onChange={(f) => setContactMail(f.target.value)}
                         type="mail"
+                        placeholder="Email@founisseur.com"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="ContactPortable">
@@ -95,6 +100,7 @@ const AdoptantPost = ({history}) => {
                         value={ContactPortable}
                         onChange={(f) => setContactPortable(f.target.value)}
                         type="string"
+                        placeholder="Numero de contact"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="Artichats">
@@ -103,6 +109,7 @@ const AdoptantPost = ({history}) => {
                         value={Artichats}
                         onChange={(f) => setArtichats(f.target.value)}
                         type="string"
+                        placeholder="Nom de l Artichats qui s'en va"
                       />
                 </Form.Group>
                 <Form.Group className="" controlId="Note">
@@ -111,6 +118,7 @@ const AdoptantPost = ({history}) => {
                         value={Note}
                         onChange={(f) => setNote(f.target.value)}
                         type="string"
+                        placeholder="Notes"
                       />
                 </Form.Group>
                 <Button variant="primary" type="submit">
