@@ -8,7 +8,7 @@ const Page2 = function(props){
     
     const {nomOutInput} = props
 
-    const [id,setId]= useState("")
+    //const [id,setId]= useState("")
     const [Nom,setNomOut]= useState("")
     const [NomDefinitif,setNomDefinitif] = useState("")
     const [Particularite,setParticularite]= useState("")
@@ -27,7 +27,7 @@ const Page2 = function(props){
 
     useEffect(()=>{
         if(nomOutInput){
-            axios.get("http://localhost:8085/animaloutnom?Nom=" + nomOutInput)
+            axios.get("http://localhost:3000/animaloutnom?Nom=" + nomOutInput)
             .then(({data})=>{
                
                 setNomOut(data.Nom)

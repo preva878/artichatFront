@@ -1,4 +1,4 @@
-import Button from '@restart/ui/esm/Button'
+
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
@@ -16,10 +16,14 @@ const AnimalInCard = ({animalIn}) => {
                     <Card.Title>Date d'arrivée: {animalIn.DateEntree}</Card.Title>
                    
                     <Card.Subtitle>sexe: {animalIn.currentSexe}</Card.Subtitle>
+                    <Card.Subtitle>Date entree: {animalIn.DateEntree}</Card.Subtitle>
+                    <Card.Subtitle>Age: {animalIn.Age} semaines</Card.Subtitle>
+                    <Card.Subtitle>Poids: {animalIn.Poids} grammes</Card.Subtitle>
+                    <Card.Subtitle>Traitement: {animalIn.Traitement}</Card.Subtitle>
                      <Card.Text>
                         Note: {animalIn.Note.slice(0,100)}
                     </Card.Text> 
-                    <Link to={``}><Button>Detail</Button></Link>
+                    
                     
                 </Card.Body>
 

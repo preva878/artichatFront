@@ -83,7 +83,7 @@ const ProductDetail = () => {
         <Row>
             <Col md={8} lg={8} sm={8}>
                 <Card className='shadow-lg m-3 p-2 rounded'>
-                        <Card.Img src={`http://localhost:3001/${productImage}`} fluid />
+                        <Card.Img src={`http://localhost:3000/${productImage}`} fluid />
                         <Card.Body>
                             <Card.Title>Title: {title}</Card.Title>
                             <Card.Title className="text-success">Price: ${price}</Card.Title>

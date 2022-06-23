@@ -11,7 +11,8 @@ import SponsorPost from './components/sponsor/PostSponsor';
 import Postequipement from './components/equipements/postEquipements';
 import ShowEquipements from './components/equipements/ShowEquipements';
 import VeterinairePost from './components/veterinaire/PostVeterinaire';
-
+import Register from './Register'
+import Login from './Login'
 
 //
 import AddProduct from './product/screens/AddProduct';
@@ -22,6 +23,9 @@ import ShowProducts from './product/screens/ShowProducts';
 //
 import Layout from './components/Layout';
 import Home from './components/Home';
+import { Component } from "react";
+import "./App.css";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 
 
@@ -46,8 +50,11 @@ function App() {
   
   
   return (
+
+   
     <div className="App">
       <header className="App-header">
+       
        <div>
        <BrowserRouter>
       <Routes>
@@ -70,14 +77,17 @@ function App() {
           <Route path="EquipementPost" element={<Postequipement />} />
           <Route path="ShowEquipements" element={<ShowEquipements />} />
           <Route path="VeterinairePost" element={<VeterinairePost />} />
-          
+         
+       
            
          
         </Route>
       </Routes>
     </BrowserRouter>
          
-         
+    <main className="App">
+      <Login />
+    </main>
         </div>
       </header>
       
@@ -86,19 +96,7 @@ function App() {
 
 
 
-       {/* <a> 
-      <input type="text" value={nomInput} onChange={i => setInputNom(i.target.value)} ></input>
-          <button onClick={Click} >entrer nom </button>
-        <br></br>
-         <Page1 nomInput={animalNom} ></Page1> 
-      </a> 
-      <a>
-      <input type="text" value={nomOutInput} onChange={j => setinputNomout(j.target.value)} ></input>
-      <button onClick={Click1} >entrer nom animal sortant</button>
-      <br></br>
-      <Page2 nomOutInput={animalNomout}></Page2> 
       
-      </a>    */}
     </div> 
   );
 }

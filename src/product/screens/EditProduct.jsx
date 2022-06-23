@@ -17,7 +17,7 @@ const EditProduct = () => {
 
     useEffect(() => {
         const getDataById = async () => {
-            const {data} = await axios.get(`/api/products/${id}`)
+            const {data} = await axios.get(`http://localhost:3000/api/products/${id}`)
             setTitle(data.title)
             setPrice(data.price)
             setDescription(data.description)
