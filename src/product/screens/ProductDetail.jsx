@@ -10,18 +10,14 @@ const ProductDetail = () => {
     const { id } = useParams()
     const history = useNavigate()
 
-    const [title, setTitle] = useState('')
-    const [price, setPrice] = useState(0)
-    const [productDescription, setProductDescription] = useState('')
-    const [published, setPublished] = useState(true)
-    const [productImage, setProductImage] = useState('')
+    const [Nom, setNom] = useState('')
+    const [Prix, setPrix] = useState(0)
+    const [Description, setDescription] = useState('')
+    const [SellWay, setSellWay] = useState('')
+    const [Image, setImage] = useState('')
 
 
-    // review rating  description
-    const [reviews, setReviews] = useState([])
-    const [rating, setRating] = useState(0)
-    const [description, setDescription] = useState('')
-
+    
 
     useEffect(() => {
 
@@ -29,14 +25,13 @@ const ProductDetail = () => {
             const { data } = await axios.get(`http://localhost:8585/api/product/getproduct/${id}`)
             console.log(data)
 
-            setTitle(data.title)
-            setPrice(data.price)
-            setProductDescription(data.description)
-            setPublished(data.published)
-            setProductImage(data.image)
+            setNom(data.Nom)
+            setPrix(data.Prix)
+            setDescription(data.Description)
+            setSellWay(data.SellWay)
+            setImage(data.Image)
 
-            // for reviews
-            setReviews(data.review)
+            
 
 
         }
@@ -47,28 +42,11 @@ const ProductDetail = () => {
 
 
     // handling Delete
-    const handleDelete = async (id) => {
-        await axios.delete(`/api/products/${id}`)
-        history.push('/products')
-    }
+  
 
-    // to add review
 
-    const addReviewHandler = async (e) => {
 
-        e.preventDefault()
-
-        let review = {
-            product_id: id,
-            rating: rating,
-            description: description
-        }
-
-        await axios.post(`/api/products/addReview/${id}`, review)
-
-        history.push('/products')
-    }
-
+   
 
 
     
@@ -83,15 +61,15 @@ const ProductDetail = () => {
         <Row>
             <Col md={8} lg={8} sm={8}>
                 <Card className='shadow-lg m-3 p-2 rounded'>
-                        <Card.Img src={`http://localhost:8585/${productImage}`} fluid />
+                        <Card.Img src={`http://localhost:8585/${Image}`} fluid />
                         <Card.Body>
-                            <Card.Title>Title: {title}</Card.Title>
-                            <Card.Title className="text-success">Price: ${price}</Card.Title>
+                            <Card.Title>Nom: {Nom}</Card.Title>
+                            <Card.Title className="text-success">Price: ${Prix}</Card.Title>
                             <Card.Text>
-                                Description: {productDescription}
+                                Description: {Description}
                             </Card.Text>
                             <Card.Text>
-                                Published: {published ? (<small>True</small>) : (<small>false</small>)}
+                               Methode de vente: {SellWay}
                             </Card.Text>
                         <br />
 
@@ -100,7 +78,7 @@ const ProductDetail = () => {
                                 <Button>Edit</Button>
                             </Link>
                             
-                            <Button className="btn btn-danger m-2" onClick={() => handleDelete(id)}>Delete</Button> 
+                            
                         
                     </Card.Body>        
                 </Card>
@@ -109,46 +87,14 @@ const ProductDetail = () => {
 
                 <Col md={4} lg={4} sm={4}>
 
-                    <h2 className='text-center'>Add Review</h2>
-                    <hr />
+                   
 
-                        <Form onSubmit={addReviewHandler}>
-                            <Form.Group className="mb-3" controlId="rating">
-                                <Form.Label>Rating</Form.Label>
-                                <Form.Control
-                                    value={rating}
-                                    onChange={(e) => setRating(e.target.value)}
-                                    type="number"
-                                />
-                            </Form.Group>
+                       
 
-                        
+                      
+                       
 
-                            <Form.Group className="mb-3" controlId="description">
-                                <Form.Label>Description</Form.Label>
-                                <Form.Control
-                                    value={description}
-                                    onChange={(e) => setDescription(e.target.value)}
-                                    as="textarea"
-                                    />
-                            </Form.Group>
-
-
-                            <Button variant="primary" type="submit">
-                                Add Review
-                            </Button>
-                        </Form>
-
-                         <br />
-
-                        <h5>Product Reviews</h5>
-                        <hr />
-
-                        {reviews.length > 0 ? (
-                            reviews.map(review => {
-                                return <p key={review.id}>Rating: {review.rating} <br /> {review.description}</p>
-                            })
-                        ): ( <p> No reviews for this product </p> )}
+                    
 
                         
                 </Col>

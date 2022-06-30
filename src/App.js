@@ -22,7 +22,10 @@ import Login from './Login'
 //
 import AddProduct from './product/screens/AddProduct';
 import EditProduct from './product/screens/EditProduct';
+
 import ProductDetail from './product/screens/ProductDetail';
+import AnimalInFiche from './components/animalin/FicheAnimalIn';
+
 import ShowProducts from './product/screens/ShowProducts';
 
 //
@@ -86,6 +89,9 @@ function App() {
           <Route path="VeterinairePost" element={<VeterinairePost />} />
           <Route path="ShowVeterinaire" element={<ShowVeterinaire />} />
           <Route path="Faq" element={<Faq />} />
+          
+          <Route exact path='/product/getproduct/:id' element={<ProductDetail />} />
+          <Route exact path='/animalin/getAnimalIn/:id' element={<AnimalInFiche />} />
          
        
            

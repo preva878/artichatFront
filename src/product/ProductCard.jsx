@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
                         canal de vente : {product.SellWay}
                     </Card.Text>
                  
-                    <Link to={`ProductDetail/${product.id}`}>
+                    <Link to={`/product/getproduct/${product.id}`}>
                         <Button>Detail</Button>
                     </Link>
                 </Card.Body>
