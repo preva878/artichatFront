@@ -53,8 +53,8 @@ return (
                         <Card.Img src={`http://localhost:8585/${Image}`} fluid />
                         <Card.Body>
                             <Card.Title>Nom: {Nom}</Card.Title>
-                             <Card.Title className="text-success">Famille d'accueil{FamilleAccueil}</Card.Title>
-                                <Card.Title className="text-success">Etat actuel{Etat}</Card.Title>
+                             <Card.Title className="text-success">Famille d'accueil: {FamilleAccueil}</Card.Title>
+                                <Card.Title className="text-success">Etat actuel: {Etat}</Card.Title>
                                 <Card.Text>
                                     Sexe actuel: {currentSexe}
                                 </Card.Text>

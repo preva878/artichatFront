@@ -9,11 +9,11 @@ import { Container, Form, Button } from 'react-bootstrap'
 const AnimalInPost = ({history}) => {
 
     const [Nom,setNom] = useState('');
-    const [currentSexe, setCurrentSexe] = useState('');
+    const [currentSexe, setCurrentSexe] = useState('inconnu');
     const [Age,setAge] = useState('');
     const [Poids,setPoids] = useState('');
     const [DateEntree,setDateEntree] = useState('');
-    const [Etat,setEtat] = useState('');
+    const [Etat,setEtat] = useState('vivant');
     const [Traitement,setTraitement] = useState('');
     const [FamilleAccueil,setFamilleAccueil] = useState('');
     const [Note,setNote] = useState('');
@@ -71,7 +71,7 @@ console.log(formData)
 <hr />
                 <Form.Group fullWidth>
                     <Form.Label>Sexe</Form.Label>
-                    <select
+                    <Form.Select
 
                         value={currentSexe}
                         label="sexe"
@@ -80,7 +80,7 @@ console.log(formData)
                         <option value={"male"}>male</option>
                         <option value={"femelle"}>femelle</option>
                         <option value={"inconnu"}>inconnu</option>
-                    </select>
+                    </Form.Select>
                     </Form.Group>
 
                 <Form.Group className="" controlId="age">
@@ -115,16 +115,15 @@ console.log(formData)
                 <hr />
                 <Form.Group className="" controlId="Etat">
                     <Form.Label>Etat</Form.Label>
-                   <select 
+                   <Form.Select 
                         value={Etat}
                         onChange={(f) => setEtat(f.target.value)}
                         type="string"
-                        placeholder="Etat:malade,vivant,decede"
-                        >
-                            <option value={"Vivant"}>Vivant</option>
+                        placeholder="Etat :malade,vivant,decede">
+                        <option value={"Vivant"}>Vivant</option>
                         <option value={"Malade"}>Malade</option>
                         <option value={"Decede"}>Decede</option>
-                        </select>
+                        </Form.Select>
                 </Form.Group>
                 <Form.Group className="" controlId="Traitement">
                     <Form.Label>Traitement reçu</Form.Label>
