@@ -4,35 +4,37 @@ import axios from 'axios'
 
 import { Container, Form, Button } from 'react-bootstrap'
 
-const SponsorPost = ({history}) => {
+const SponsorPost = ({}) => {
 
-    const[Nom,setNom]=useState('')
-    const[Materiel,setMateriel]=useState('')
-    const[DateEntree,setDateEntree]=useState('')
-    const[Quantite,setQuantite]=useState('')
-    const[Types,setTypes]=useState('')
-    const[Adresse,setAdresse]=useState('')
-    const[Cp,setCp]=useState('')
-    const[Ville,setVille]=useState('')
+    const[nom,setNom]=useState('')
+    const[materiel,setMateriel]=useState('')
+    const[dateEntre,setDateEntree]=useState('')
+    const[quantite,setQuantite]=useState('')
+    const[types,setTypes]=useState('')
+    const[adresse,setAdresse]=useState('')
+    const[cp,setCp]=useState('')
+    const[ville,setVille]=useState('')
+    const[image,setimage]=useState('')
 
 
 const handleSubmit = async (f) => {
     f.preventDefault()
-    alert(`Sponsor ${Nom} encoder`)
+    alert(`Sponsor ${nom} encoder`)
 
     const formData = new FormData()
 
-    formData.append('Nom',Nom)
-    formData.append('Materiel',Materiel)
-    formData.append('DateEntree',DateEntree)
-    formData.append('Quantite',Quantite)
-    formData.append('Types',Types)
-    formData.append('Adresse',Adresse)
-    formData.append('Cp',Cp)
-    formData.append('Ville',Ville)
+    formData.append('nom',nom)
+    formData.append('materiel',materiel)
+    formData.append('dateEntre',dateEntre)
+    formData.append('quantite',quantite)
+    formData.append('types',types)
+    formData.append('adresse',adresse)
+    formData.append('cp',cp)
+    formData.append('ville',ville)
+    formData.append('image',image)
     
-    await axios.post('http://localhost:3000/api/sponsor/addSponsor',formData)
-    history.push('/sponsor/addSponsor')
+    await axios.post('http://localhost:8585/api/sponsor/addsponsor',formData)
+    // history.push('/sponsor/addsponsor')
 }
 //ne marche pas
     return (
@@ -44,66 +46,75 @@ const handleSubmit = async (f) => {
 
             <Form onSubmit={handleSubmit} method="POST" encType='multipart/form-data'  >
 
-                <Form.Group controlId="Nom">
+            <Form.Group controlId="fileName" className="mb-3">
+                    <Form.Label>Upload Image</Form.Label>
+                    <Form.Control
+                        type="file"
+                        name='image'
+                        onChange={(f) => setimage(f.target.files[0])}
+                        size="sm" />
+                </Form.Group>
+                
+                <Form.Group controlId="nom">
                     <Form.Label>Nom</Form.Label>
                     <Form.Control
-                    value={Nom}
+                    value={nom}
                     onChange={(f) => setNom(f.target.value)}
                     type="string"
                     />
                 </Form.Group>
-                <Form.Group controlId='Materiel'>
+                <Form.Group controlId='materiel'>
                     <Form.Label>Materiel</Form.Label>
                     <Form.Control
-                    value={Materiel}
+                    value={materiel}
                     onChange={(f) => setMateriel(f.target.value)}
                     type="string"
                     />
                 </Form.Group>
-                <Form.Group controlId='DateEntree'>
+                <Form.Group controlId='dateEntre'>
                     <Form.Label>DateEntree</Form.Label>
                     <Form.Control
-                    value={DateEntree}
+                    value={dateEntre}
                     onChange={(f) => setDateEntree(f.target.value)}
                     type="date"
                     />
                 </Form.Group>
-                <Form.Group controlId='Quantite'>
+                <Form.Group controlId='quantite'>
                     <Form.Label>Quantite</Form.Label>
                     <Form.Control
-                    value={Quantite}
+                    value={quantite}
                     onChange={(f) => setQuantite(f.target.value)}
                     type="number"
                     />
                 </Form.Group>
-                <Form.Group controlId='Types'>
+                <Form.Group controlId='types'>
                     <Form.Label>Types</Form.Label>
                     <Form.Control
-                    value={Types}
+                    value={types}
                     onChange={(f) => setTypes(f.target.value)}
                     type="string"
                     />
                 </Form.Group>
-                <Form.Group controleId='Adresse'>
+                <Form.Group controleId='adresse'>
                     <Form.Label>Adresse</Form.Label>
                     <Form.Control
-                    value={Adresse}
+                    value={adresse}
                     onChange={(f) => setAdresse(f.target.value)}
                     type="string"
                     />
                 </Form.Group>
-                <Form.Group controlId='Cp'>
+                <Form.Group controlId='cp'>
                     <Form.Label>Cp</Form.Label>
                     <Form.Control
-                    value={Cp}
+                    value={cp}
                     onChange={(f) => setCp(f.target.value)}
                     type="number"
                     />
                 </Form.Group>
-                <Form.Group controlId='Ville'>
+                <Form.Group controlId='ville'>
                     <Form.Label>Ville</Form.Label>
                     <Form.Control
-                    value={Ville}
+                    value={ville}
                     onChange={(f) => setVille(f.target.value)}
                     type="string"
                     />

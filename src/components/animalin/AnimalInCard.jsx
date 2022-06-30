@@ -8,7 +8,7 @@ const AnimalInCard = ({animalIn}) => {
         <>
 
             <Card  style={{ width: '18rem' }}>
-                <Card.Img src={`http://localhost:3000/${animalIn.Image}` } /> 
+                <Card.Img src={`http://localhost:8585/${animalIn.Image}` } /> 
                 <Card.Body>
                     <Card.Title>Nom: {animalIn.Nom}</Card.Title>
                     <Card.Title>Famille: {animalIn.FamilleAccueil}</Card.Title>
@@ -20,9 +20,9 @@ const AnimalInCard = ({animalIn}) => {
                     <Card.Subtitle>Age: {animalIn.Age} semaines</Card.Subtitle>
                     <Card.Subtitle>Poids: {animalIn.Poids} grammes</Card.Subtitle>
                     <Card.Subtitle>Traitement: {animalIn.Traitement}</Card.Subtitle>
-                     <Card.Text>
+                     {/* <Card.Text>
                         Note: {animalIn.Note.slice(0,100)}
-                    </Card.Text> 
+                    </Card.Text>  */}
                     
                     {/* <Link to={`/FicheAnimalIn`}>
                         <Button>Detail</Button>

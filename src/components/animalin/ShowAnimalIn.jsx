@@ -10,7 +10,7 @@ const ShowAnimalIns = () => {
 
     useEffect(()=>{
         const getAnimalInsData = async () => {
-            const {data} = await axios.get('http://localhost:3000/api/getAllAnimalIns')
+            const {data} = await axios.get('http://localhost:8585/api/animalin/getAllAnimalIns')
             console.log(data)
             setAnimalIns(data)
         }

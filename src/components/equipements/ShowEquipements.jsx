@@ -10,7 +10,7 @@ const ShowEquipements = () => {
 
     useEffect(() =>{
         const getEquipements = async () => {
-            const {data} = await axios.get('http://localhost:3000/api/getEquipements')
+            const {data} = await axios.get('http://localhost:8585/api/eqp/getEquipements')
             console.log(data)
             setEquipements(data)
         }

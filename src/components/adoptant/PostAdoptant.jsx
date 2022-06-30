@@ -16,7 +16,12 @@ const AdoptantPost = ({history}) => {
     const [ContactMail,setContactMail] = useState("");
     const [ContactPortable,setContactPortable] = useState("");
     const [Artichats,setArtichats] = useState("");
+    const [Lien,setLien] = useState("");
     const [Note,setNote] = useState("");
+    const [NumeroPermis,setNumeroPermis] = useState("");
+    const [DatePermis,setDatePermis]=useState("");
+    
+
    
     
     const handleSubmit = async (f) => {
@@ -33,9 +38,12 @@ const AdoptantPost = ({history}) => {
         formData.append('ContactMail',ContactMail)
         formData.append('ContactPortable',ContactPortable)
         formData.append('Artichats',Artichats)
+        formData.append('Lien',Lien)
         formData.append('Note',Note)
+        formData.append('NumeroPermis',NumeroPermis)
+        formData.append('DatePermis',DatePermis)
 
-        await axios.post('http://localhost:3000/api/addAdoptant',formData)
+        await axios.post('http://localhost:8585/api/adoptant/addAdoptant',formData)
         history.push('/addAdoptant')
     };
     return(
@@ -47,7 +55,15 @@ const AdoptantPost = ({history}) => {
 
             <Form onSubmit={handleSubmit} method="POST" encType='multipart/form-data' >
             
-           
+            <Form.Group controlId="fileName" className="mb-3">
+                <Form.Label>Upload Image</Form.Label>
+                <Form.Control
+                    type="file"
+                    name='image'
+                    onChange={(f) => setImage(f.target.files[0])}
+                    size="sm" 
+                    />
+            </Form.Group>
             <Form.Group className="" controlId="Nom">
                     <Form.Label>Nom</Form.Label>
                     <Form.Control
@@ -112,6 +128,15 @@ const AdoptantPost = ({history}) => {
                         placeholder="Nom de l Artichats qui s'en va"
                       />
                 </Form.Group>
+                <Form.Group className="" controlId="Lien">
+                    <Form.Label>Lien facebook/twitter</Form.Label>
+                    <Form.Control
+                        value={Lien}
+                        onChange={(f) => setLien(f.target.value)}
+                        type="text"
+                        placeholder="Lien"
+                      />
+                </Form.Group>
                 <Form.Group className="" controlId="Note">
                     <Form.Label>Note</Form.Label>
                     <Form.Control
@@ -121,6 +146,25 @@ const AdoptantPost = ({history}) => {
                         placeholder="Notes"
                       />
                 </Form.Group>
+                <Form.Group className="" controlId="NumeroPermis">
+                    <Form.Label>Numero du Permis</Form.Label>
+                    <Form.Control
+                        value={NumeroPermis}
+                        onChange={(f) => setNumeroPermis(f.target.value)}
+                        type="number"
+                        placeholder="Numero du Permis"
+                      />
+                </Form.Group>
+                <Form.Group className="" controlId="DatePermis">
+                    <Form.Label>DatePermis</Form.Label>
+                    <Form.Control
+                        value={DatePermis}
+                        onChange={(f) => setDatePermis(f.target.value)}
+                        type="date"
+                        placeholder="Date du Permis"
+                      />
+                </Form.Group>
+
                 <Button variant="primary" type="submit">
                     Add artichats
                 </Button>

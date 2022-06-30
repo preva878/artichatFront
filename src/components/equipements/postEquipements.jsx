@@ -29,7 +29,7 @@ const EquipementPost = ({history}) => {
         formData.append('DatePeremption',DatePeremption)
         formData.append('Etats',Etats)
 
-        await axios.post('http://localhost:3000/api/postEquipement',formData)
+        await axios.post('http://localhost:8585/api/eqp/postEquipement',formData)
         history.push('/postEquipement')
     }
 

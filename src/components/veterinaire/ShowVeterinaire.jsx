@@ -9,11 +9,11 @@ const ShowVeterinaires = () => {
 
     useEffect(() => {
         const getVeterinairesData = async() => {
-            const {data} =await axios.get('http://localhost:3000/api/getVeterinaires')
+            const {data} =await axios.get('http://localhost:8585/api/veto/getAllVeterinaires')
             console.log(data)
             setVeterinaires(data)
         }
-        getVeterinairesData
+        getVeterinairesData()
     }, [])
     return (
         <>
@@ -26,7 +26,7 @@ const ShowVeterinaires = () => {
                     {
                         Veterinaires.map(veterinaire => {
                             return <Col md={6} lg={4} key={veterinaire.id}> 
-                            <AnimalInCard veterinaire={veterinaire}/> 
+                            <VeterinairesCard veterinaire={veterinaire}/> 
                             </Col>
                         } )
                     }

@@ -8,11 +8,11 @@ import { Container, Form, Button } from 'react-bootstrap'
 const AddProduct = ({ history }) => {
 
 
-    const [title, setTitle] = useState('')
-    const [price, setPrice] = useState(0)
-    const [description, setDescription] = useState('')
-    const [published, setPublished] = useState(true)
-    const [image, setImage] = useState('')
+    const [Nom, setNom] = useState('')
+    const [Prix, setPrix] = useState(0)
+    const [Description, setDescription] = useState('')
+    const [SellWay, setSellWay] = useState(true)
+    const [Image, setImage] = useState('')
 
     const addProductHandler = async (e) => {
 
@@ -28,13 +28,13 @@ const AddProduct = ({ history }) => {
 
         const formData = new FormData()
 
-        formData.append('image', image)
-        formData.append('title', title)
-        formData.append('price', price)
-        formData.append('description', description)
-        formData.append('published', published)
+        formData.append('Image', Image)
+        formData.append('Nom', Nom)
+        formData.append('Prix', Prix)
+        formData.append('Description', Description)
+        formData.append('SellWay', SellWay)
 
-        await axios.post('http://localhost:3000/api/addProduct', formData)
+        await axios.post('http://localhost:8585/api/product/addProduct', formData)
         history.push('/addProduct')
     
     }
@@ -61,31 +61,40 @@ const AddProduct = ({ history }) => {
                     <Form.Group className="mb-3" controlId="Nom">
                         <Form.Label>Nom</Form.Label>
                         <Form.Control
-                            value={title}
-                            onChange={(e) => setTitle(e.target.value)}
+                            value={Nom}
+                            onChange={(e) => setNom(e.target.value)}
                             type="text"
                             placeholder="Nom de l objet en vente"
                           />
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="price">
+                    <Form.Group className="mb-3" controlId="Prix">
                         <Form.Label>Prix en euro</Form.Label>
                         <Form.Control
-                            value={price}
-                            onChange={(e) => setPrice(e.target.value)}
+                            value={Prix}
+                            onChange={(e) => setPrix(e.target.value)}
                             type="number"
                             placeholder="prix"
                              />
                     </Form.Group>
 
                   
-                    <Form.Group className="mb-3" controlId="description">
+                    <Form.Group className="mb-3" controlId="Description">
                         <Form.Label>Description</Form.Label>
                         <Form.Control
-                            value={description}
+                            value={Description}
                             onChange={(e) => setDescription(e.target.value)}
                             as="textarea"
                             placeholder="description"
+                            />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="SellWay">
+                        <Form.Label>canal de vente</Form.Label>
+                        <Form.Control
+                            value={SellWay}
+                            onChange={(e) => setSellWay(e.target.value)}
+                            as="textarea"
+                            placeholder="SellWay"
                             />
                     </Form.Group>
 
@@ -93,7 +102,7 @@ const AddProduct = ({ history }) => {
 
 
                     <Button variant="primary" type="submit">
-                        Add Product
+                        ajouter Produit
                     </Button>
                 </Form>
             </Container>

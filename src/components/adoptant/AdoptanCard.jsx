@@ -9,7 +9,7 @@ const AdoptantCard = ({adoptant}) => {
     return(
         <>
             <Card style = {{ width:'18rem'}}>
-                
+            <Card.Img src={`http://localhost:8585/${adoptant.Image}` } /> 
                 <Card.Body>
                     <Card.Title>Nom: {adoptant.Nom}</Card.Title>
                     <Card.Title>Adresse: {adoptant.Adresse}</Card.Title>

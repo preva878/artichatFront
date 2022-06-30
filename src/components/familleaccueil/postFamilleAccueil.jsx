@@ -8,9 +8,9 @@ const FaPost = ({}) => {
     
     const [Nom,setNom] = useState('');
     const [Adresse,setAdresse] = useState('');
-    const [Cp,setCp] = useState('');
+    const [CP,setCp] = useState('');
     const [Ville,setVille] = useState('');
-    const [EquipementsFourni,setEquipementsFourni] = useState('');
+    const [EquipementsFournit,setEquipementsFournit] = useState('');
     const [Artichats,setArtichats] = useState('');
     const [Notes,setNotes] = useState('');
 
@@ -21,13 +21,13 @@ const FaPost = ({}) => {
 
         formData.append('Nom',Nom)
         formData.append('Adresse',Adresse)
-        formData.append('Cp',Cp)
+        formData.append('CP',CP)
         formData.append('Ville',Ville)
-        formData.append('EquipementsFourni',EquipementsFourni)
+        formData.append('EquipementsFournit',EquipementsFournit)
         formData.append('Artichats',Artichats)
         formData.append('Notes',Notes)
 
-        await axios.post('http://localhost:3000/api/fa/addFamilleAccueil',formData)
+        await axios.post('http://localhost:8585/api/fa/addFamilleAccueil',formData)
         /*history.push('/postfamilleaccueil')*/
 
     }
@@ -63,7 +63,7 @@ const FaPost = ({}) => {
             <Form.Group>
             <Form.Label>Code postal</Form.Label>
                     <Form.Control
-                        value={Cp}
+                        value={CP}
                         onChange={(e) => setCp(e.target.value)}
                         type="string"
                         placeholder="code postal"
@@ -79,10 +79,10 @@ const FaPost = ({}) => {
                       />
             </Form.Group>
             <Form.Group>
-            <Form.Label>EquipementsFourni</Form.Label>
+            <Form.Label>Equipements Fournit</Form.Label>
                     <Form.Control
-                        value={EquipementsFourni}
-                        onChange={(e) => setEquipementsFourni(e.target.value)}
+                        value={EquipementsFournit}
+                        onChange={(e) => setEquipementsFournit(e.target.value)}
                         type="string"
                         placeholder="EquipementsFourni de la fa"
                       />

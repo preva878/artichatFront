@@ -12,13 +12,14 @@ const VeterinairePost = ({history}) => {
     const [CP,setCP]=useState('');
     const [DateIntervention,setIntervention]=useState('');
     const [Prix,setPrix]=useState('');
-    const [TypeIntervention,setTypesIntervention]=useState('');
+    const [TypeIntervention,setTypeIntervention]=useState('');
     const [Artichats,setArtichats]=useState('');
     const [Notes,setNotes]=useState('');
+    const [Images,setImages]=useState('');
 
     const handleSubmit = async (v) => {
         v.preventDefault()
-        alert(`veterinaire ${Nom} est intervenu${TypeIntervention} sur ${Artichats}`)
+        alert(`veterinaire ${Nom} est intervenu ${TypeIntervention} sur ${Artichats}`)
 
     const formData = new FormData()
 
@@ -28,12 +29,13 @@ const VeterinairePost = ({history}) => {
     formData.append('CP',CP)
     formData.append('DateIntervention',DateIntervention)
     formData.append('Prix',Prix)
-    formData.append('TypesIntervention',TypeIntervention)
+    formData.append('TypeIntervention',TypeIntervention)
     formData.append('Artichats',Artichats)
     formData.append('Notes',Notes)
+    formData.append('Images',Images)
 
     
-    await axios.post('http://localhost:3000/api/postVeterinaire',formData)
+    await axios.post('http://localhost:8585/api/veto/addveterinaire',formData)
     history.push('/postVeterinaire')
     console.log(Nom)
     } 
@@ -45,7 +47,14 @@ const VeterinairePost = ({history}) => {
                     <h1>ajouter un veterinaire</h1>
                     <hr />
                     <Form onSubmit={handleSubmit} method="POST" encType='multipart/form-data'>
-
+                    <Form.Group controlId="fileName" className="mb-3">
+                    <Form.Label>Upload Image</Form.Label>
+                    <Form.Control
+                        type="file"
+                        name='Images'
+                        onChange={(v) => setImages(v.target.files[0])}
+                        size="sm" />
+                </Form.Group>
               
                 <Form.Group className="" controlId="Nom">
                         <Form.Label>Nom</Form.Label>
@@ -96,14 +105,14 @@ const VeterinairePost = ({history}) => {
                         <Form.Control
                             value={Prix}
                             onChange={(v) => setPrix(v.target.value)}
-                            type="string"
+                            type="number"
                         />
                     </Form.Group>
                     <Form.Group className="" controlId="TypeIntervention">
                         <Form.Label>Type d'intervention</Form.Label>
                         <Form.Control
                             value={TypeIntervention}
-                            onChange={(v) => setTypesIntervention(v.target.value)}
+                            onChange={(v) => setTypeIntervention(v.target.value)}
                             type="string"
                         />
                     </Form.Group>

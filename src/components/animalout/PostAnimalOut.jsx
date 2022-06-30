@@ -44,7 +44,7 @@ const handleSubmit = async (f) => {
     formData.append('DateDepart',DateDepart)
     formData.append('Image',Image)
 
-    await axios.post('http://localhost:3000/api/addAnimalOut',formData)
+    await axios.post('http://localhost:8585/api/animalout/addAnimalOut',formData)
     history.push('/addAnimalOut')
 }
     return(
@@ -85,7 +85,7 @@ const handleSubmit = async (f) => {
 
                 <Form.Group className="" controlId="SexeDefini">
                     <Form.Label>Sexe definitif </Form.Label>
-                    <select
+                    <Form.Select
                         value={SexeDefini}
                         onChange={(f) => setSexeDefini(f.target.value)}
                         type="string"
@@ -93,7 +93,7 @@ const handleSubmit = async (f) => {
                         <option value={"male"}>male</option>
                         <option value={"femelle"}>femelle</option>
                         
-                        </select>
+                        </Form.Select>
                 </Form.Group>
                 <Form.Group className="" controlId="Particularite">
                     <Form.Label>Particularite</Form.Label>

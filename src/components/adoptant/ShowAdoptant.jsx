@@ -9,7 +9,7 @@ const ShowAdoptants = () => {
 
     useEffect(() => {
         const getAdoptantData = async() => {
-            const {data} = await axios.get('http://localhost:3000/api/getAdoptants')
+            const {data} = await axios.get('http://localhost:8585/api/adoptant/getAdoptants')
             console.log(data)
             setAdoptants(data)
         }

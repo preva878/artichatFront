@@ -3,14 +3,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AnimalInPost from './components/animalin/PostAnimalin';
 import AnimalOutPost from './components/animalout/PostAnimalOut';
 import FamilleAccueilPost from './components/familleaccueil/postFamilleAccueil';
+import ShowFamilleAccueil from './components/familleaccueil/ShowFamilleAccueil';
 import AdoptantPost from './components/adoptant/PostAdoptant';
 import ShowAnimalIns from './components/animalin/ShowAnimalIn';
 import ShowAnimalOuts from './components/animalout/ShowAnimalOut';
 import AddAdoptant from './components/adoptant/PostAdoptant';
 import SponsorPost from './components/sponsor/PostSponsor';
+import ShowSponsor from './components/sponsor/ShowSponsor';
 import Postequipement from './components/equipements/postEquipements';
 import ShowEquipements from './components/equipements/ShowEquipements';
 import VeterinairePost from './components/veterinaire/PostVeterinaire';
+import ShowVeterinaire from './components/veterinaire/ShowVeterinaire';
+import Faq from './components/Faq';
+
 import Register from './Register'
 import Login from './Login'
 
@@ -66,6 +71,7 @@ function App() {
           <Route path="AnimalOutPost" element={<AnimalOutPost />} />
          
           <Route path="FamilleAccueilPost" element={<FamilleAccueilPost />} />
+          <Route path="ShowFamilleAccueil" element={<ShowFamilleAccueil />} />
           <Route path="AdoptantPost" element={<AdoptantPost />} />
           <Route path="ShowAnimalIns" element={<ShowAnimalIns />} />
           <Route path="ShowAnimalOuts" element={<ShowAnimalOuts />} />
@@ -74,9 +80,12 @@ function App() {
           <Route path="ShowAdoptants" element={<ShowAdoptants />} />
           <Route path="addAdoptant" element={<AddAdoptant />} />
           <Route path="PostSponsor" element={<SponsorPost />} />
+          <Route path="ShowSponsor" element={<ShowSponsor />} />
           <Route path="EquipementPost" element={<Postequipement />} />
           <Route path="ShowEquipements" element={<ShowEquipements />} />
           <Route path="VeterinairePost" element={<VeterinairePost />} />
+          <Route path="ShowVeterinaire" element={<ShowVeterinaire />} />
+          <Route path="Faq" element={<Faq />} />
          
        
            

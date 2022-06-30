@@ -9,7 +9,7 @@ const ShowAnimalOuts = () => {
 
     useEffect(()=> {
         const getAnimalOutsData = async () => {
-            const {data} = await axios.get('http://localhost:3000/api/getAllAnimalOuts')
+            const {data} = await axios.get('http://localhost:8585/api/animalout/getAllAnimalOuts')
             console.log(data)
             setAnimalOuts(data)
         }

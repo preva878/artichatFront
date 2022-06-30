@@ -8,14 +8,14 @@ const EquipementCard = ({equipements}) => {
         <>
 
         <Card  style={{ width: '18rem' }}>
-            <Card.Img src={`http://localhost:3000/${equipements.Image}` } /> 
+            <Card.Img src={`http://localhost:8585/${equipements.Image}` } /> 
             <Card.Body>
                 <Card.Title>Nom: {equipements.Nom}</Card.Title>
                 <Card.Title>Famille: {equipements.Types}</Card.Title>
                 <Card.Title>Etat: {equipements.Etat}</Card.Title>
                 <Card.Title>Date d'arrivée: {equipements.DateEntree}</Card.Title>
                
-                <Card.Subtitle>sexe: {equipements.Quantite}</Card.Subtitle>
+                <Card.Subtitle>Quantite: {equipements.Quantite}</Card.Subtitle>
                
                 
             </Card.Body>
