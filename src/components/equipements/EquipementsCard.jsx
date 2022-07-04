@@ -12,12 +12,14 @@ const EquipementCard = ({equipements}) => {
             <Card.Body>
                 <Card.Title>Nom: {equipements.Nom}</Card.Title>
                 <Card.Title>Famille: {equipements.Types}</Card.Title>
-                <Card.Title>Etat: {equipements.Etat}</Card.Title>
+                <Card.Title>Etat: {equipements.Etats}</Card.Title>
                 <Card.Title>Date d'arrivée: {equipements.DateEntree}</Card.Title>
                
                 <Card.Subtitle>Quantite: {equipements.Quantite}</Card.Subtitle>
                
-                
+                <Link to={`/eqp/getequipement/${equipements.id}`}>
+                        <Button>Detail</Button>
+                    </Link>
             </Card.Body>
         </Card>
         </>

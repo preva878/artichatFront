@@ -22,9 +22,9 @@ const FamilleCard = ({familleaccueil}) => {
                     
                     
                     
-                    {/* <Link to={`/FicheAnimalIn`}>
+                    <Link to={`/fa/getfamilleaccueil/${familleaccueil.id}`}>
                         <Button>Detail</Button>
-                    </Link> */}
+                    </Link>
                 </Card.Body>
 
 

@@ -18,9 +18,9 @@ const SponsorCard = ({sponsor}) => {
               
                   
                     
-                    {/* <Link to={`/FicheAnimalIn`}>
+                    <Link to={`/sponsor/getsponsor/${sponsor.id}`}>
                         <Button>Detail</Button>
-                    </Link> */}
+                    </Link> 
                 </Card.Body>
 
                 

@@ -25,6 +25,17 @@ import EditProduct from './product/screens/EditProduct';
 
 import ProductDetail from './product/screens/ProductDetail';
 import AnimalInFiche from './components/animalin/FicheAnimalIn';
+import AnimalOutFiche from './components/animalout/FicheAnimalOut';
+import FicheAdoptant from './components/adoptant/FicheAdoptant'
+import EquipementFiche from './components/equipements/FicheEquipement'
+import FaFiche from './components/familleaccueil/Fichefamille'
+import SponsorFiche from './components/sponsor/FicheSponsor'
+import VeterinaireFiche from './components/veterinaire/FicheVeterinaire'
+
+import AnimaInDetail from './components/animalin/AnimalIndetail'
+import EditAdoptant from './components/adoptant/AdoptantDetail'
+import EditEquipement from './components/equipements/EquipementsDetail'
+import EditAnimalOut from './components/animalout/AnimalOutDetail'
 
 import ShowProducts from './product/screens/ShowProducts';
 
@@ -92,10 +103,21 @@ function App() {
           
           <Route exact path='/product/getproduct/:id' element={<ProductDetail />} />
           <Route exact path='/animalin/getAnimalIn/:id' element={<AnimalInFiche />} />
+          <Route exact path='/animalout/getAnimalOut/:id' element={<AnimalOutFiche />} />
+          <Route exact path='/adoptant/getadoptant/:id' element={<FicheAdoptant />} />
+          <Route exact path='/eqp/getequipement/:id' element={<EquipementFiche />} />
+          <Route exact path='/fa/getfamilleaccueil/:id' element={<FaFiche />} />
+          <Route exact path='/sponsor/getsponsor/:id' element={<SponsorFiche />} />
+          <Route exact path='/veto/getveterinaire/:id' element={<VeterinaireFiche />} />
          
-       
-           
-         
+          <Route exact path='/animalin/getAnimalInUp/:id' element={<AnimaInDetail />} /> 
+          <Route exact path='/adoptant/getadoptantup/:id' element={<EditAdoptant />} /> 
+          <Route exact path='/eqp/getequipementup/:id' element={<EditEquipement />} />
+          <Route exact path='/animalOut/getAnimalOutup/:id' element={<EditAnimalOut />} />  
+          
+          
+          
+
         </Route>
       </Routes>
     </BrowserRouter>

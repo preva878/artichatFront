@@ -16,6 +16,10 @@ const AdoptantCard = ({adoptant}) => {
                     <Card.Title>Cp:{adoptant.CP}</Card.Title>
                     <Card.Title>Artichat:{adoptant.Artichats}</Card.Title>
                 </Card.Body>
+
+                <Link to={`/adoptant/getadoptant/${adoptant.id}`}>
+                        <Button>Detail</Button>
+                    </Link>
             </Card>
         
         </>

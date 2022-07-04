@@ -1,13 +1,16 @@
-import Login from "../Login";
+
 
 const Home = () => {
     return (
       <>
     <ul>
-    <h2>Login sur home</h2>
-    <main className="App">
-      <Login />
-    </main>
+    <h2>bienvenu sur home</h2>
+    <p>Bienvenu sur la gestion api des coeurs d'artichats</p>
+    <hr />
+    
+    
+   
+    
         
     </ul>
     </>

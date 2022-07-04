@@ -15,9 +15,10 @@ const AnimalOutCard = ({animalOut}) => {
                     <Card.Title>Date d'arrivée: {animalOut.DateDepart}</Card.Title>
                     <Card.Title>vaccin: {animalOut.Vaccin}</Card.Title>
                     <Card.Subtitle>sexe: {animalOut.SexeDefini}</Card.Subtitle>
-                    {/* <Card.Text>
-                        Note: {Artichat.Note.slice(0,100)}
-                    </Card.Text> */}
+                   
+                    <Link to={`/animalout/getAnimalOut/${animalOut.id}`}>
+                        <Button>Detail</Button>
+                    </Link>
                     
                 </Card.Body>
 

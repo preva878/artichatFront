@@ -19,7 +19,9 @@ const VeterinairesCard = ({veterinaire}) => {
                 <Card.Title>Artichats: {veterinaire.Artichats}</Card.Title>
                 <Card.Subtitle>Notes: {veterinaire.Notes}</Card.Subtitle>
               
-                
+                <Link to={`/veto/getveterinaire/${veterinaire.id}`}>
+                        <Button>Detail</Button>
+                    </Link>
             </Card.Body>
 
             

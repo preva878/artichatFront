@@ -4,6 +4,13 @@ import { Link } from 'react-router-dom'
 import { useNavigate, useParams } from 'react-router'
 import axios from 'axios'
 
+import ScaleIcon from '@mui/icons-material/Scale';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import BadgeIcon from '@mui/icons-material/Badge';
+import WcIcon from '@mui/icons-material/Wc';
+
+
+
 const AnimalInFiche = () => {
 
     const { id } = useParams()
@@ -48,23 +55,25 @@ return (
         <h1 className="text-center">Detail Product</h1>
         <hr />
         <Row>
+    {/* /**</> */ }
+
             <Col md={8} lg={8} sm={8}>
                 <Card className='shadow-lg m-3 p-2 rounded'>
                         <Card.Img src={`http://localhost:8585/${Image}`} fluid />
                         <Card.Body>
-                            <Card.Title>Nom: {Nom}</Card.Title>
+                            <Card.Title><BadgeIcon/>  Nom: {Nom}</Card.Title>
                              <Card.Title className="text-success">Famille d'accueil: {FamilleAccueil}</Card.Title>
                                 <Card.Title className="text-success">Etat actuel: {Etat}</Card.Title>
-                                <Card.Text>
+                                <Card.Text> <WcIcon/>
                                     Sexe actuel: {currentSexe}
-                                </Card.Text>
+                                </Card.Text> 
                                     <Card.Text>
                                         Age: {Age}
                                     </Card.Text>
-                                        <Card.Text>
+                                        <Card.Text><ScaleIcon/>
                                             Poids: {Poids}
                                         </Card.Text>
-                                            <Card.Text>
+                                            <Card.Text> <CalendarMonthIcon/>
                                                 Date d'entrée: {DateEntree}
                                             </Card.Text>
                                                 <Card.Text>
@@ -74,8 +83,8 @@ return (
                                                         Note: {Note}
                                                     </Card.Text>
                         <br />
-                            <Link to={`/product/edit/${id}`}>
-                                <Button>pas encore fonctionnel</Button>
+                            <Link to={`/animalin/getAnimalInUp/${id}`}>
+                                <Button>Update</Button>
                             </Link>
                     </Card.Body>        
                 </Card>
