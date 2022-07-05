@@ -74,7 +74,7 @@ const ProductDetail = () => {
                         <br />
 
                     
-                            <Link to={`/product/edit/${id}`}>
+                            <Link to={`/product/getproductup/${id}`}>
                                 <Button>Edit</Button>
                             </Link>
                             

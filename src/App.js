@@ -36,6 +36,9 @@ import AnimaInDetail from './components/animalin/AnimalIndetail'
 import EditAdoptant from './components/adoptant/AdoptantDetail'
 import EditEquipement from './components/equipements/EquipementsDetail'
 import EditAnimalOut from './components/animalout/AnimalOutDetail'
+import EditFamilleAccueil from './components/familleaccueil/FamilleAccueilDetails'
+import EditSponsor from './components/sponsor/SponsorDetail'
+import EditVeterinaire from './components/veterinaire/VeterinaireDetail'
 
 import ShowProducts from './product/screens/ShowProducts';
 
@@ -114,8 +117,13 @@ function App() {
           <Route exact path='/adoptant/getadoptantup/:id' element={<EditAdoptant />} /> 
           <Route exact path='/eqp/getequipementup/:id' element={<EditEquipement />} />
           <Route exact path='/animalOut/getAnimalOutup/:id' element={<EditAnimalOut />} />  
+          <Route exact path='/fa/getfamilleaccueilup/:id' element={<EditFamilleAccueil />} />
+          <Route exact path='/product/getproductup/:id' element={<EditProduct />} /> 
+          <Route exact path='/sponsor/getsponsorup/:id' element={<EditSponsor />} />   
+          <Route exact path='/veto/getveterinaireup/:id' element={<EditVeterinaire />} />           
           
-          
+
+        
           
 
         </Route>

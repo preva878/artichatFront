@@ -18,7 +18,7 @@ const EditAnimalIn = () => {
     const [Traitement,setTraitement] = useState('');
     const [FamilleAccueil,setFamilleAccueil] = useState('');
     const [Note,setNote] = useState('');
-    const [Image,setImage] = useState('');
+    
 
 
     useEffect(() => {
@@ -35,7 +35,7 @@ const EditAnimalIn = () => {
             setTraitement(data.Traitement)
             setFamilleAccueil(data.FamilleAccueil)
             setNote(data.Note)
-            setImage(data.Image)
+           
         
         }
         getSingleAnimalinData()
@@ -55,7 +55,7 @@ const EditAnimalIn = () => {
             Traitement: Traitement,
             FamilleAccueil: FamilleAccueil,
             Note: Note,
-            Image:Image,
+            
         }
         await axios.put(`http://localhost:8585/api/animalin/getAnimalInUp/${id}`,data)
         navigate.push('/animalin/getAnimalInUp')
@@ -68,15 +68,7 @@ const EditAnimalIn = () => {
             <hr />
 
             <Form onSubmit={updateHandler} >
-            <Form.Group controlId="fileName" className="mb-3">
-                <Form.Label>Upload Image</Form.Label>
-                <Form.Control
-                    type="file"
-                    name='image'
-                    onChange={(f) => setImage(f.target.files[0])}
-                    size="sm" 
-                    />
-            </Form.Group>
+          
             <Form.Group className="" controlId="Nom" placeholder="essai">
                     <Form.Label>Nom</Form.Label>
                     <Form.Control

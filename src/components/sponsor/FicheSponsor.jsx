@@ -5,15 +5,14 @@ import { useNavigate, useParams } from 'react-router'
 import axios from 'axios'
 
 
-import PhoneIcon from '@mui/icons-material/Phone';
+
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import EmailIcon from '@mui/icons-material/Email';
+
 import StickyNote2Icon from '@mui/icons-material/StickyNote2';
-import PetsIcon from '@mui/icons-material/Pets';
+
 import BadgeIcon from '@mui/icons-material/Badge';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
-import PaidIcon from '@mui/icons-material/Paid';
+
 
 const SponsorFiche = () => {
 
