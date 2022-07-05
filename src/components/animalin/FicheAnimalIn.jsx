@@ -52,7 +52,7 @@ return (
     <>
 
    <Container className="mt-10 p-4">
-        <h1 className="text-center">Detail Product</h1>
+        <h1 className="text-center">Detail Artichats In</h1>
         <hr />
         <Row>
     {/* /**</> */ }

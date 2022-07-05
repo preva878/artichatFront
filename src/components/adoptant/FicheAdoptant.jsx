@@ -12,7 +12,7 @@ import LocalPoliceIcon from '@mui/icons-material/LocalPolice';
 import StickyNote2Icon from '@mui/icons-material/StickyNote2';
 import PetsIcon from '@mui/icons-material/Pets';
 import Linkify from 'react-linkify'
-
+import BadgeIcon from '@mui/icons-material/Badge';
 
 const FicheAdoptant = () => {
 
@@ -58,14 +58,14 @@ const FicheAdoptant = () => {
         <>
     
        <Container className="mt-10 p-4">
-            <h1 className="text-center">Detail Product</h1>
+            <h1 className="text-center">Detail Adoptant</h1>
             <hr />
             <Row>
                 <Col md={8} lg={8} sm={8}>
                     <Card className='shadow-lg m-3 p-2 rounded'>
                             <Card.Img src={`http://localhost:8585/${Image}`} fluid />
                             <Card.Body>
-                                <Card.Title>Nom: {Nom}</Card.Title>
+                                <Card.Title><BadgeIcon/> Nom: {Nom}</Card.Title>
                                  <Card.Title className="text-success"><LocationOnIcon/> Adresse: {Adresse}</Card.Title>
                                     <Card.Title className="text-success"><LocationOnIcon/> Ville et Code Postal: {Ville}, {CP}</Card.Title>
                                     <Card.Title className="text-success"> <PetsIcon/>  Artichats: {Artichats}</Card.Title>

@@ -12,6 +12,8 @@ const FaPost = ({}) => {
     const [Ville,setVille] = useState('');
     const [EquipementsFournit,setEquipementsFournit] = useState('');
     const [Artichats,setArtichats] = useState('');
+    const [ContactMail,setContactMail] = useState('');
+    const [Contacttel,setContacttel] = useState('');
     const [Notes,setNotes] = useState('');
 
     const handleSubmit = async (e) => {
@@ -25,6 +27,8 @@ const FaPost = ({}) => {
         formData.append('Ville',Ville)
         formData.append('EquipementsFournit',EquipementsFournit)
         formData.append('Artichats',Artichats)
+        formData.append('ContactMail',ContactMail)
+        formData.append('Contacttel',Contacttel)
         formData.append('Notes',Notes)
 
         await axios.post('http://localhost:8585/api/fa/addFamilleAccueil',formData)
@@ -101,6 +105,24 @@ const FaPost = ({}) => {
                     <Form.Control
                         value={Notes}
                         onChange={(e) => setNotes(e.target.value)}
+                        type="string"
+                        placeholder="Notes"
+                      />
+            </Form.Group>
+            <Form.Group>
+            <Form.Label>Contacttel</Form.Label>
+                    <Form.Control
+                        value={Contacttel}
+                        onChange={(e) => setContacttel(e.target.value)}
+                        type="string"
+                        placeholder="Notes"
+                      />
+            </Form.Group>
+            <Form.Group>
+            <Form.Label>ContactMail</Form.Label>
+                    <Form.Control
+                        value={ContactMail}
+                        onChange={(e) => setContactMail(e.target.value)}
                         type="string"
                         placeholder="Notes"
                       />

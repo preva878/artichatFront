@@ -4,7 +4,17 @@ import { Link } from 'react-router-dom'
 import { useNavigate, useParams } from 'react-router'
 import axios from 'axios'
 
+
+import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import EmailIcon from '@mui/icons-material/Email';
+import StickyNote2Icon from '@mui/icons-material/StickyNote2';
+import PetsIcon from '@mui/icons-material/Pets';
+import BadgeIcon from '@mui/icons-material/Badge';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
+import PaidIcon from '@mui/icons-material/Paid';
+
 
 const VeterinaireFiche = () => {
 
@@ -20,6 +30,9 @@ const VeterinaireFiche = () => {
     const [Prix,setPrix] = useState('')
     const [TypeIntervention,setTypeIntervention] = useState('')
     const [Artichats,setArtichats] = useState('')
+    const [ContactMail,setContactMail]= useState('');
+
+    const [ContactTel,setContactTel]= useState('');
     const [Notes,setNotes] = useState('')
 
     useEffect(() => {
@@ -37,6 +50,8 @@ const VeterinaireFiche = () => {
             setPrix(data.Prix)
             setTypeIntervention(data.TypeIntervention)
             setArtichats(data.Artichats)
+            setContactMail(data.ContactMail)
+            setContactTel(data.ContactTel)
             setNotes(data.Notes)
         } 
         getSingleVeterinaire()
@@ -46,31 +61,33 @@ const VeterinaireFiche = () => {
         <>
     
        <Container className="mt-10 p-4">
-            <h1 className="text-center">Detail Product</h1>
+            <h1 className="text-center">Detail Veterinaire</h1>
             <hr />
             <Row>
                 <Col md={8} lg={8} sm={8}>
                     <Card className='shadow-lg m-3 p-2 rounded'>
                             <Card.Img src={`http://localhost:8585/${Images}`} fluid />
                             <Card.Body>
-                                <Card.Title>Nom: {Nom}</Card.Title>
+                                <Card.Title><BadgeIcon/>Nom: {Nom}</Card.Title>
                                  <Card.Title className="text-success"><LocationOnIcon/> Adresse: {Adresse}</Card.Title>
                                     <Card.Title className="text-success"><LocationOnIcon/> Ville et CP: {Ville}, {CP}</Card.Title>
-                                    <Card.Text>
+                                    <Card.Title className="text-success"><PhoneIcon/> ContactTel: {ContactTel}</Card.Title>
+                                    <Card.Title className="text-success"><EmailIcon/> ContactMail: {ContactMail}</Card.Title>
+                                    <Card.Text><MedicalServicesIcon/>
                                         TypeIntervention: {TypeIntervention},
                                         sur {Artichats}
                                     </Card.Text>
-                                        <Card.Text>
+                                        <Card.Text><PetsIcon/>
                                         Artichats: {Artichats}
                                         </Card.Text>
-                                            <Card.Text>
+                                            <Card.Text><CalendarMonthIcon/>
                                             Date Intervention: {DateIntervention}
                                             </Card.Text>
-                                                <Card.Text>
+                                                <Card.Text><PaidIcon/>
                                                 Prix: {Prix}
                                                 </Card.Text>
                                                    
-                                                        <Card.Text>
+                                                        <Card.Text><StickyNote2Icon/>
                                                             Note: {Notes}
                                                         </Card.Text>
                             <br />

@@ -11,7 +11,7 @@ const AddProduct = ({ history }) => {
     const [Nom, setNom] = useState('')
     const [Prix, setPrix] = useState(0)
     const [Description, setDescription] = useState('')
-    const [SellWay, setSellWay] = useState(true)
+    const [SellWay, setSellWay] = useState('')
     const [Image, setImage] = useState('')
 
     const addProductHandler = async (e) => {

@@ -16,6 +16,9 @@ const VeterinairePost = ({history}) => {
     const [Artichats,setArtichats]=useState('');
     const [Notes,setNotes]=useState('');
     const [Images,setImages]=useState('');
+    const [ContactMail,setContactMail]= useState('');
+
+    const [ContactTel,setContactTel]= useState('');
 
     const handleSubmit = async (v) => {
         v.preventDefault()
@@ -33,6 +36,8 @@ const VeterinairePost = ({history}) => {
     formData.append('Artichats',Artichats)
     formData.append('Notes',Notes)
     formData.append('Images',Images)
+    formData.append('ContactMail',ContactMail)
+    formData.append('ContactTel',ContactTel)
 
     
     await axios.post('http://localhost:8585/api/veto/addveterinaire',formData)
@@ -122,6 +127,22 @@ const VeterinairePost = ({history}) => {
                             value={Artichats}
                             onChange={(v) => setArtichats(v.target.value)}
                             type="string"
+                        />
+                    </Form.Group>
+                    <Form.Group className="" controlId="ContactTel">
+                        <Form.Label>ContactTel</Form.Label>
+                        <Form.Control
+                            value={ContactTel}
+                            onChange={(v) => setContactTel(v.target.value)}
+                            type="text"
+                        />
+                    </Form.Group>
+                    <Form.Group className="" controlId="ContactMail">
+                        <Form.Label>ContactMail</Form.Label>
+                        <Form.Control
+                            value={ContactMail}
+                            onChange={(v) => setContactMail(v.target.value)}
+                            type="text"
                         />
                     </Form.Group>
                     <Form.Group className="" controlId="Notes">

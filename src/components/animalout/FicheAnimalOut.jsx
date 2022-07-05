@@ -54,7 +54,7 @@ const AnimalOutFiche = () => {
     return(
         <>
          <Container className="mt-10 p-4">
-        <h1 className="text-center">Detail Product</h1>
+        <h1 className="text-center">Detail Artichats Out</h1>
         <hr />
         <Row>
             <Col md={8} lg={8} sm={8}>
@@ -83,7 +83,7 @@ const AnimalOutFiche = () => {
                                             </Card.Text>
 
                                                     <Card.Text>
-                                                        Note: {Puce}
+                                                        Numero de puce: {Puce}
                                                     </Card.Text>
                         <br />
                             <Link to={`/animalOut/getAnimalOutup/${id}`}>

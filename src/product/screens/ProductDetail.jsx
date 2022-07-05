@@ -55,7 +55,7 @@ const ProductDetail = () => {
         <>
 
         <Container className="mt-10 p-4">
-        <h1 className="text-center">Detail Product</h1>
+        <h1 className="text-center">Detail Produit en vente</h1>
         <hr />
 
         <Row>
